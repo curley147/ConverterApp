@@ -26,5 +26,26 @@ namespace ConverterApp
         {
             this.InitializeComponent();
         }
+        private void Rectangle_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            //FlyoutBase.ShowAttachedFlyout((FrameworkElement)sender);
+        }
+        private void Tb_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            FlyoutBase.ShowAttachedFlyout((FrameworkElement)sender);
+        }
+
+        /*private void ChangeColorItem_Click(object sender, RoutedEventArgs e)
+        {
+            // Change the color from red to blue or blue to red.
+            if (rectangleFill.Color == Windows.UI.Colors.Red)
+            {
+                rectangleFill.Color = Windows.UI.Colors.Blue;
+            }
+            else
+            {
+                rectangleFill.Color = Windows.UI.Colors.Red;
+            }
+        }*/
     }
 }

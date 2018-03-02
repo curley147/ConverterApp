@@ -8,17 +8,43 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Pivot>
-            <PivotHeaderItem>
+        <Pivot x:Name="pvtConv">
+            <PivotItem x:Name="curr" Header="Currency" Background="LightGoldenrodYellow">
+                <TextBox x:Name="tbName" Text="Please select currency you want to convert from:" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBox>
+            </PivotItem>
+            <PivotItem x:Name="dist" Header="Distance" Background="LightBlue">
                 
-            </PivotHeaderItem>
-            <PivotHeaderItem>
+            </PivotItem>
+            <PivotItem x:Name="weight" Header="Weight" Background="LightGray">
+                <TextBlock Text="Select Units you are converting from" Tapped="Tb_Tapped">
+                    <FlyoutBase.AttachedFlyout>
+                        <MenuFlyout>
+                            <MenuFlyoutItem Text="kilos"/>
+                            <MenuFlyoutItem Text="lbs"/>
+                            <MenuFlyoutItem Text="grams"/>
+                            <MenuFlyoutSeparator />
+                            <MenuFlyoutItem Text="ounces" />
+                            <MenuFlyoutItem Text="tonnes" />
+                        </MenuFlyout>
+                    </FlyoutBase.AttachedFlyout>
+                </TextBlock>
+            </PivotItem>
+            <PivotItem x:Name="temp" Header="Temperature" Background="LightGreen">
 
-            </PivotHeaderItem>
-            <PivotHeaderItem>
+            </PivotItem>
+            <PivotItem x:Name="speed" Header="Speed" Background="LightCoral">
 
-            </PivotHeaderItem>
+            </PivotItem>
+            <PivotItem x:Name="area" Header="Area" Background="LightSeaGreen">
 
+            </PivotItem>
+            <PivotItem x:Name="vol" Header="Volume" Background="LightCyan">
+
+            </PivotItem>
+            <PivotItem x:Name="bytes"  Header="Bytes" Background="Lavender">
+
+            </PivotItem>
         </Pivot>
+        
     </Grid>
 </Page>
