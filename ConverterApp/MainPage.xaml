@@ -16,20 +16,34 @@
                 
             </PivotItem>
             <PivotItem x:Name="weight" Header="Weight" Background="LightGray">
-                <TextBlock Text="Select Units you are converting from" Tapped="Tb_Tapped">
-                    <FlyoutBase.AttachedFlyout>
-                        <MenuFlyout>
-                            <MenuFlyoutItem Text="kilos"/>
-                            <MenuFlyoutItem Text="lbs"/>
-                            <MenuFlyoutItem Text="grams"/>
-                            <MenuFlyoutSeparator />
-                            <MenuFlyoutItem Text="ounces" />
-                            <MenuFlyoutItem Text="tonnes" />
-                        </MenuFlyout>
-                    </FlyoutBase.AttachedFlyout>
-                </TextBlock>
+                <Grid>
+                    <TextBlock Text="Converting from:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin = "10,100,440,300"></TextBlock>
+                    <ComboBox  Height = "40" Width = "200" HorizontalAlignment = "Left" Margin = "130,100,440,300">
+                        <ComboBoxItem Content = "kilos"/>
+                        <ComboBoxItem Content = "lbs"/>
+                        <ComboBoxItem Content = "grams"/>
+                        <ComboBoxItem Content = "ounces"/>
+                        <ComboBoxItem Content = "tonnes"/>
+                    </ComboBox>
+                    <TextBlock Text="to:" HorizontalAlignment="Center" VerticalAlignment="Top" Margin = "120,100,40,300"></TextBlock>
+                    <ComboBox Height = "40" Width = "200" Margin = "450,100,0,0">
+                        <ComboBoxItem Content = "kilos"/>
+                        <ComboBoxItem Content = "lbs"/>
+                        <ComboBoxItem Content = "grams"/>
+                        <ComboBoxItem Content = "ounces"/>
+                        <ComboBoxItem Content = "tonnes"/>
+                    </ComboBox>
+                </Grid>
             </PivotItem>
             <PivotItem x:Name="temp" Header="Temperature" Background="LightGreen">
+                <Grid>
+                    <TextBox x:Name="celsius" TextChanging="Text_Changing" Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,90,0,0" TextAlignment="Right" FontSize="20"></TextBox>
+                    <TextBlock Text="C° (Celsius)" FontSize="20" VerticalAlignment="Top" Margin = "550,95,0,0"></TextBlock>
+                    <TextBox x:Name="fahrenheit" Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,140,0,0" TextAlignment="Right" FontSize="20"></TextBox>
+                    <TextBlock Text="F° (Fahrenheit)" FontSize="20" VerticalAlignment="Top" Margin = "550,145,0,0"></TextBlock>
+                    <TextBox Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,190,0,0" TextAlignment="Right" FontSize="20"></TextBox>
+                    <TextBlock Text="K (Kelvin)" FontSize="20" VerticalAlignment="Top" Margin = "550,195,0,0"></TextBlock>
+                </Grid>
 
             </PivotItem>
             <PivotItem x:Name="speed" Header="Speed" Background="LightCoral">

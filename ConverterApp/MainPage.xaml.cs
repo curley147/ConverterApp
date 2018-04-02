@@ -47,5 +47,11 @@ namespace ConverterApp
                 rectangleFill.Color = Windows.UI.Colors.Red;
             }
         }*/
+        private void Text_Changing(TextBox sender, TextBoxTextChangingEventArgs args)
+        {
+            double celDouble = Convert.ToDouble(celsius.Text);
+            fahrenheit.Text = Convert.ToString(celDouble * 10);
+        }
+        
     }
 }
