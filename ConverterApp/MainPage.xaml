@@ -37,11 +37,11 @@
             </PivotItem>
             <PivotItem x:Name="temp" Header="Temperature" Background="LightGreen">
                 <Grid>
-                    <TextBox x:Name="celsius" TextChanging="Text_Changing" Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,90,0,0" TextAlignment="Right" FontSize="20"></TextBox>
+                    <TextBox x:Name="celsius" TextChanging="Cel_Changing" AcceptsReturn="True" MaxLength="20" Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,90,0,0" TextAlignment="Right" FontSize="20"></TextBox>
                     <TextBlock Text="C° (Celsius)" FontSize="20" VerticalAlignment="Top" Margin = "550,95,0,0"></TextBlock>
-                    <TextBox x:Name="fahrenheit" Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,140,0,0" TextAlignment="Right" FontSize="20"></TextBox>
+                    <TextBox x:Name="fahrenheit" TextChanging="Fah_Changing" AcceptsReturn="True" MaxLength="20" Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,140,0,0" TextAlignment="Right" FontSize="20"></TextBox>
                     <TextBlock Text="F° (Fahrenheit)" FontSize="20" VerticalAlignment="Top" Margin = "550,145,0,0"></TextBlock>
-                    <TextBox Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,190,0,0" TextAlignment="Right" FontSize="20"></TextBox>
+                    <TextBox x:Name="kelvin" TextChanging="Kel_Changing" AcceptsReturn="True" MaxLength="20" Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,190,0,0" TextAlignment="Right" FontSize="20"></TextBox>
                     <TextBlock Text="K (Kelvin)" FontSize="20" VerticalAlignment="Top" Margin = "550,195,0,0"></TextBlock>
                 </Grid>
 
