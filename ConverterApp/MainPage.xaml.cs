@@ -26,79 +26,136 @@ namespace ConverterApp
         {
             this.InitializeComponent();
         }
-        private void Rectangle_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-            //FlyoutBase.ShowAttachedFlyout((FrameworkElement)sender);
-        }
-        private void Tb_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-            FlyoutBase.ShowAttachedFlyout((FrameworkElement)sender);
-        }
-
-        /*private void ChangeColorItem_Click(object sender, RoutedEventArgs e)
-        {
-            // Change the color from red to blue or blue to red.
-            if (rectangleFill.Color == Windows.UI.Colors.Red)
-            {
-                rectangleFill.Color = Windows.UI.Colors.Blue;
-            }
-            else
-            {
-                rectangleFill.Color = Windows.UI.Colors.Red;
-            }
-        }*/
+        
         private void Cel_Changing(object sender, TextBoxTextChangingEventArgs args)
         {
             fahrenheit.TextChanging -= Fah_Changing;
             kelvin.TextChanging -= Kel_Changing;
-            if (celsius.Text == null)
+            rankine.TextChanging -= Ran_Changing;
+            reamur.TextChanging -= Rea_Changing;
+            if (celsius.Text == "")
             {
                 celsius.Text = "0";
             }
-            double celDouble = Convert.ToDouble(celsius.Text);
-            fahrenheit.Text = Convert.ToString((celDouble * 9 / 5.0) + 32);
-            kelvin.Text = Convert.ToString(celDouble + 273.15);
+
+            double celDouble = 0;
+            if (double.TryParse(celsius.Text, out celDouble))
+            {
+                fahrenheit.Text = Convert.ToString((celDouble * 9 / 5) + 32);
+                kelvin.Text = Convert.ToString(celDouble + 273.15);
+                rankine.Text = Convert.ToString((celDouble + 273.15) * 9 / 5);
+                reamur.Text = Convert.ToString((celDouble * 4 / 5));
+            }
 
             fahrenheit.TextChanging += Fah_Changing;
             kelvin.TextChanging += Kel_Changing;
+            rankine.TextChanging += Ran_Changing;
+            reamur.TextChanging += Rea_Changing;
         }
 
         private void Fah_Changing(object sender, TextBoxTextChangingEventArgs args)
         {
             celsius.TextChanging -= Cel_Changing;
             kelvin.TextChanging -= Kel_Changing;
-            if (fahrenheit.Text == null)
+            rankine.TextChanging -= Ran_Changing;
+            reamur.TextChanging -= Rea_Changing;
+            if (fahrenheit.Text == "")
             {
                 fahrenheit.Text = "0";
             }
-            double fahDouble = Convert.ToDouble(fahrenheit.Text);
-            celsius.Text = Convert.ToString(((fahDouble - 32) * 5) / 9);
-            kelvin.Text = Convert.ToString(5 / 9 * (fahDouble - 32) + 273.15);
+            double fahDouble = 0;
+
+            if (double.TryParse(fahrenheit.Text, out fahDouble))
+            {
+                celsius.Text = Convert.ToString(((fahDouble - 32) * 5) / 9);
+                kelvin.Text = Convert.ToString((fahDouble - 32) * 5 / 9 + 273.15);
+                rankine.Text = Convert.ToString(fahDouble + 459.67);
+                reamur.Text = Convert.ToString(((fahDouble - 32) * 4) / 9);
+
+            }
 
             celsius.TextChanging += Cel_Changing;
             kelvin.TextChanging += Kel_Changing;
+            rankine.TextChanging += Ran_Changing;
+            reamur.TextChanging += Rea_Changing;
         }
 
         private void Kel_Changing(object sender, TextBoxTextChangingEventArgs args)
         {
             celsius.TextChanging -= Cel_Changing;
             fahrenheit.TextChanging -= Fah_Changing;
-            if (kelvin.Text == null)
+            rankine.TextChanging -= Ran_Changing;
+            reamur.TextChanging -= Rea_Changing;
+            if (kelvin.Text == "")
             {
                 kelvin.Text = "0";
             }
-            double kelDouble = Convert.ToDouble(kelvin.Text);
-            celsius.Text = Convert.ToString(kelDouble - 273.15);
-            fahrenheit.Text = Convert.ToString(((kelDouble - 273) * 9 / 5) + 32);
+            double kelDouble = 0;
+
+            if (double.TryParse(kelvin.Text, out kelDouble))
+            {
+                celsius.Text = Convert.ToString(kelDouble - 273.15);
+                fahrenheit.Text = Convert.ToString(((kelDouble - 273.15) * 9 / 5) + 32);
+                rankine.Text = Convert.ToString(kelDouble * 9 / 5);
+                reamur.Text = Convert.ToString((kelDouble - 273.15) * 4 / 5);
+            }
 
             celsius.TextChanging += Cel_Changing;
             fahrenheit.TextChanging += Fah_Changing;
+            rankine.TextChanging += Ran_Changing;
+            reamur.TextChanging += Rea_Changing;
         }
 
-        private void Temp_Changed(object sender, TextChangedEventArgs args)
+        private void Ran_Changing(object sender, TextBoxTextChangingEventArgs args)
         {
-            
+            celsius.TextChanging -= Cel_Changing;
+            fahrenheit.TextChanging -= Fah_Changing;
+            kelvin.TextChanging -= Kel_Changing;
+            reamur.TextChanging -= Rea_Changing;
+            if (rankine.Text == "")
+            {
+                rankine.Text = "0";
+            }
+            double ranDouble = 0;
+
+            if (double.TryParse(rankine.Text, out ranDouble))
+            {
+                celsius.Text = Convert.ToString((ranDouble - 491.67) * 5 / 9);
+                fahrenheit.Text = Convert.ToString(ranDouble - 459.67);
+                kelvin.Text = Convert.ToString(ranDouble * 5 / 9);
+                reamur.Text = Convert.ToString((ranDouble - 491.67) * 4 / 9);
+            }
+
+            celsius.TextChanging += Cel_Changing;
+            fahrenheit.TextChanging += Fah_Changing;
+            kelvin.TextChanging += Kel_Changing;
+            reamur.TextChanging += Rea_Changing;
         }
 
+        private void Rea_Changing(object sender, TextBoxTextChangingEventArgs args)
+        {
+            celsius.TextChanging -= Cel_Changing;
+            fahrenheit.TextChanging -= Fah_Changing;
+            kelvin.TextChanging -= Kel_Changing;
+            rankine.TextChanging -= Ran_Changing;
+            if (reamur.Text == "")
+            {
+                reamur.Text = "0";
+            }
+            double reaDouble = 0;
+
+            if (double.TryParse(reamur.Text, out reaDouble))
+            {
+                celsius.Text = Convert.ToString(reaDouble * 5 / 4);
+                fahrenheit.Text = Convert.ToString(reaDouble * 9 / 4 + 32);
+                kelvin.Text = Convert.ToString(reaDouble * 5 / 4 + 273.15);
+                reamur.Text = Convert.ToString(reaDouble * 9 / 4 + 491.67);
+            }
+
+            celsius.TextChanging += Cel_Changing;
+            fahrenheit.TextChanging += Fah_Changing;
+            kelvin.TextChanging += Kel_Changing;
+            rankine.TextChanging += Ran_Changing;
+        }
     }
 }

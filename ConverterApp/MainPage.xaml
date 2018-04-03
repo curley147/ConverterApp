@@ -10,53 +10,50 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Pivot x:Name="pvtConv">
             <PivotItem x:Name="curr" Header="Currency" Background="LightGoldenrodYellow">
-                <TextBox x:Name="tbName" Text="Please select currency you want to convert from:" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBox>
+                <Grid>
+                    
+                </Grid>
             </PivotItem>
             <PivotItem x:Name="dist" Header="Distance" Background="LightBlue">
-                
+                <Grid>
+                    
+                </Grid>
             </PivotItem>
             <PivotItem x:Name="weight" Header="Weight" Background="LightGray">
                 <Grid>
-                    <TextBlock Text="Converting from:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin = "10,100,440,300"></TextBlock>
-                    <ComboBox  Height = "40" Width = "200" HorizontalAlignment = "Left" Margin = "130,100,440,300">
-                        <ComboBoxItem Content = "kilos"/>
-                        <ComboBoxItem Content = "lbs"/>
-                        <ComboBoxItem Content = "grams"/>
-                        <ComboBoxItem Content = "ounces"/>
-                        <ComboBoxItem Content = "tonnes"/>
-                    </ComboBox>
-                    <TextBlock Text="to:" HorizontalAlignment="Center" VerticalAlignment="Top" Margin = "120,100,40,300"></TextBlock>
-                    <ComboBox Height = "40" Width = "200" Margin = "450,100,0,0">
-                        <ComboBoxItem Content = "kilos"/>
-                        <ComboBoxItem Content = "lbs"/>
-                        <ComboBoxItem Content = "grams"/>
-                        <ComboBoxItem Content = "ounces"/>
-                        <ComboBoxItem Content = "tonnes"/>
-                    </ComboBox>
+                    
                 </Grid>
             </PivotItem>
             <PivotItem x:Name="temp" Header="Temperature" Background="LightGreen">
                 <Grid>
-                    <TextBox x:Name="celsius" TextChanging="Cel_Changing" AcceptsReturn="True" MaxLength="20" Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,90,0,0" TextAlignment="Right" FontSize="20"></TextBox>
-                    <TextBlock Text="C° (Celsius)" FontSize="20" VerticalAlignment="Top" Margin = "550,95,0,0"></TextBlock>
-                    <TextBox x:Name="fahrenheit" TextChanging="Fah_Changing" AcceptsReturn="True" MaxLength="20" Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,140,0,0" TextAlignment="Right" FontSize="20"></TextBox>
+                    <TextBox x:Name="celsius" TextChanging="Cel_Changing" AcceptsReturn="True" InputScope="Number" MaxLength="20" Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,90,0,0" TextAlignment="Right" FontSize="20"></TextBox>
+                    <TextBlock Text="°C (Celsius)" FontSize="20" VerticalAlignment="Top" Margin = "550,95,0,0"></TextBlock>
+                    <TextBox x:Name="fahrenheit" TextChanging="Fah_Changing" AcceptsReturn="True" InputScope="Number" MaxLength="20" Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,140,0,0" TextAlignment="Right" FontSize="20"></TextBox>
                     <TextBlock Text="F° (Fahrenheit)" FontSize="20" VerticalAlignment="Top" Margin = "550,145,0,0"></TextBlock>
-                    <TextBox x:Name="kelvin" TextChanging="Kel_Changing" AcceptsReturn="True" MaxLength="20" Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,190,0,0" TextAlignment="Right" FontSize="20"></TextBox>
+                    <TextBox x:Name="kelvin" TextChanging="Kel_Changing" AcceptsReturn="True" InputScope="Number" MaxLength="20" Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,190,0,0" TextAlignment="Right" FontSize="20"></TextBox>
                     <TextBlock Text="K (Kelvin)" FontSize="20" VerticalAlignment="Top" Margin = "550,195,0,0"></TextBlock>
+                    <TextBox x:Name="rankine" TextChanging="Ran_Changing" AcceptsReturn="True" InputScope="Number" MaxLength="20" Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,240,0,0" TextAlignment="Right" FontSize="20"></TextBox>
+                    <TextBlock Text="°Ra (Rankine)" FontSize="20" VerticalAlignment="Top" Margin = "550,245,0,0"></TextBlock>
+                    <TextBox x:Name="reamur" TextChanging="Rea_Changing" AcceptsReturn="True" InputScope="Number" MaxLength="20" Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,290,0,0" TextAlignment="Right" FontSize="20"></TextBox>
+                    <TextBlock Text="°Re (Réamur)" FontSize="20" VerticalAlignment="Top" Margin = "550,295,0,0"></TextBlock>
                 </Grid>
 
             </PivotItem>
             <PivotItem x:Name="speed" Header="Speed" Background="LightCoral">
-
+                <Grid>
+                </Grid>
             </PivotItem>
             <PivotItem x:Name="area" Header="Area" Background="LightSeaGreen">
-
+                <Grid>
+                </Grid>
             </PivotItem>
             <PivotItem x:Name="vol" Header="Volume" Background="LightCyan">
-
+                <Grid>
+                </Grid>
             </PivotItem>
             <PivotItem x:Name="bytes"  Header="Bytes" Background="Lavender">
-
+                <Grid>
+                </Grid>
             </PivotItem>
         </Pivot>
         
