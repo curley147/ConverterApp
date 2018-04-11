@@ -50,7 +50,7 @@
                     <TextBox x:Name="mlgram" TextChanging="Mil_Changing" AcceptsReturn="True" InputScope="Number" MaxLength="20" Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,160,0,0" TextAlignment="Right" FontSize="20"></TextBox>
                     <TextBlock Text="mg (milligram)" FontSize="20" VerticalAlignment="Top" Margin = "550,160,0,0"></TextBlock>
                     <TextBox x:Name="micro" TextChanging="Mic_Changing" AcceptsReturn="True" InputScope="Number" MaxLength="20" Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,210,0,0" TextAlignment="Right" FontSize="20"></TextBox>
-                    <TextBlock Text="µg (micgrogram)" FontSize="20" VerticalAlignment="Top" Margin = "550,210,0,0"></TextBlock>
+                    <TextBlock Text="µg (microgram)" FontSize="20" VerticalAlignment="Top" Margin = "550,210,0,0"></TextBlock>
                     <TextBox x:Name="nano" TextChanging="Nano_Changing" AcceptsReturn="True" InputScope="Number" MaxLength="20" Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,260,0,0" TextAlignment="Right" FontSize="20"></TextBox>
                     <TextBlock Text="ng (nanogram)" FontSize="20" VerticalAlignment="Top" Margin = "550,260,0,0"></TextBlock>
                     <TextBox x:Name="pico" TextChanging="Pico_Changing" AcceptsReturn="True" InputScope="Number" MaxLength="20" Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,310,0,0" TextAlignment="Right" FontSize="20"></TextBox>
@@ -90,6 +90,26 @@
             </PivotItem>
             <PivotItem x:Name="vol" Header="Volume" Background="LightCyan">
                 <Grid>
+                    <TextBox x:Name="mcub" TextChanging="Mcub_Changing" AcceptsReturn="True" InputScope="Number" MaxLength="20" Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,15,0,0" TextAlignment="Right" FontSize="20"></TextBox>
+                    <TextBlock Text="m³ (cubic metre)" FontSize="20" VerticalAlignment="Top" Margin = "550,15,0,0"></TextBlock>
+                    <TextBox x:Name="hec" TextChanging="Hec_Changing" AcceptsReturn="True" InputScope="Number" MaxLength="20" Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,65,0,0" TextAlignment="Right" FontSize="20"></TextBox>
+                    <TextBlock Text="hL (hectolitre)" FontSize="20" VerticalAlignment="Top" Margin = "550,65,0,0"></TextBlock>
+                    <TextBox x:Name="litre" TextChanging="Litre_Changing" AcceptsReturn="True" InputScope="Number" MaxLength="20" Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,115,0,0" TextAlignment="Right" FontSize="20"></TextBox>
+                    <TextBlock Text="l (litre)" FontSize="20" VerticalAlignment="Top" Margin = "550,115,0,0"></TextBlock>
+                    <TextBox x:Name="decl" TextChanging="Decl_Changing" AcceptsReturn="True" InputScope="Number" MaxLength="20" Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,165,0,0" TextAlignment="Right" FontSize="20"></TextBox>
+                    <TextBlock Text="dL (decilitre)" FontSize="20" VerticalAlignment="Top" Margin = "550,165,0,0"></TextBlock>
+                    <TextBox x:Name="mill" TextChanging="Mill_Changing" AcceptsReturn="True" InputScope="Number" MaxLength="20" Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,215,0,0" TextAlignment="Right" FontSize="20"></TextBox>
+                    <TextBlock Text="mL (millilitre)" FontSize="20" VerticalAlignment="Top" Margin = "550,215,0,0"></TextBlock>
+                    <TextBox x:Name="micl" TextChanging="Micl_Changing" AcceptsReturn="True" InputScope="Number" MaxLength="20" Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,265,0,0" TextAlignment="Right" FontSize="20"></TextBox>
+                    <TextBlock Text="µL (microlitre)" FontSize="20" VerticalAlignment="Top" Margin = "550,265,0,0"></TextBlock>
+                    <TextBox x:Name="gal" TextChanging="Gal_Changing" AcceptsReturn="True" InputScope="Number" MaxLength="20" Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,315,0,0" TextAlignment="Right" FontSize="20"></TextBox>
+                    <TextBlock Text="gal (gallon)" FontSize="20" VerticalAlignment="Top" Margin = "550,315,0,0"></TextBlock>
+                    <TextBox x:Name="pint" TextChanging="Pint_Changing" AcceptsReturn="True" InputScope="Number" MaxLength="20" Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,365,0,0" TextAlignment="Right" FontSize="20"></TextBox>
+                    <TextBlock Text="pt (pint)" FontSize="20" VerticalAlignment="Top" Margin = "550,365,0,0"></TextBlock>
+                    <TextBox x:Name="ounc" TextChanging="Ounc_Changing" AcceptsReturn="True" InputScope="Number" MaxLength="20" Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,415,0,0" TextAlignment="Right" FontSize="20"></TextBox>
+                    <TextBlock Text="oz (fluid)" FontSize="20" VerticalAlignment="Top" Margin = "550,415,0,0"></TextBlock>
+                    <TextBox x:Name="cubinch" TextChanging="CubInch_Changing" AcceptsReturn="True" InputScope="Number" MaxLength="20" Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,465,0,0" TextAlignment="Right" FontSize="20"></TextBox>
+                    <TextBlock Text="in³ (cubic inch)" FontSize="20" VerticalAlignment="Top" Margin = "550,465,0,0"></TextBlock>
                 </Grid>
             </PivotItem>
             <PivotItem x:Name="bytes"  Header="Bytes" Background="Lavender">

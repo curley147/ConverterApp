@@ -1095,5 +1095,283 @@ namespace ConverterApp
             inch.TextChanging += Inch_Changing;
             metre.TextChanging += Met_Changing;
         }
+
+        private void Mcub_Changing(TextBox sender, TextBoxTextChangingEventArgs args)
+        {
+            hec.TextChanging -= Hec_Changing;
+            litre.TextChanging -= Litre_Changing;
+            decl.TextChanging -= Decl_Changing;
+            mill.TextChanging -= Mill_Changing;
+            micl.TextChanging -= Micl_Changing;
+            gal.TextChanging -= Gal_Changing;
+            pint.TextChanging -= Pint_Changing;
+            ounc.TextChanging -= Ounc_Changing;
+            cubinch.TextChanging -= Cubinch_Changing;
+
+            if (mcub.Text == "")
+            {
+                mcub.Text = "0";
+            }
+            double mcubDouble = 0;
+
+            if (double.TryParse(mcub.Text, out mcubDouble))
+            {
+                hec.Text = Convert.ToString(mcubDouble * 10);
+                litre.Text = Convert.ToString(mcubDouble * 1000);
+                decl.Text = Convert.ToString(mcubDouble * 10000);
+                mill.Text = Convert.ToString(mcubDouble * 10000000);
+                micl.Text = Convert.ToString(mcubDouble * 1000000000);
+                gal.Text = Convert.ToString(mcubDouble * 219.9692483);
+                pint.Text = Convert.ToString(mcubDouble * 1759.7539864);
+                ounc.Text = Convert.ToString(mcubDouble * 35195.079728);
+                cubinch.Text = Convert.ToString(mcubDouble * 61023.744095);
+
+            }
+
+            hec.TextChanging += Hec_Changing;
+            litre.TextChanging += Litre_Changing;
+            decl.TextChanging += Decl_Changing;
+            mill.TextChanging += Mill_Changing;
+            micl.TextChanging += Micl_Changing;
+            gal.TextChanging += Gal_Changing;
+            pint.TextChanging += Pint_Changing;
+            ounc.TextChanging += Ounc_Changing;
+            cubinch.TextChanging += Cubinch_Changing;
+        }
+
+        private void Hec_Changing(TextBox sender, TextBoxTextChangingEventArgs args)
+        {
+            mcub.TextChanging -= Mcub_Changing;
+            litre.TextChanging -= Litre_Changing;
+            decl.TextChanging -= Decl_Changing;
+            mill.TextChanging -= Mill_Changing;
+            micl.TextChanging -= Micl_Changing;
+            gal.TextChanging -= Gal_Changing;
+            pint.TextChanging -= Pint_Changing;
+            ounc.TextChanging -= Ounc_Changing;
+            cubinch.TextChanging -= Cubinch_Changing;
+
+            if (hec.Text == "")
+            {
+                hec.Text = "0";
+            }
+            double hecDouble = 0;
+
+            if (double.TryParse(hec.Text, out hecDouble))
+            {
+                mcub.Text = Convert.ToString(hecDouble * 0.1);
+                litre.Text = Convert.ToString(hecDouble * 100);
+                decl.Text = Convert.ToString(hecDouble * 1000);
+                mill.Text = Convert.ToString(hecDouble * 100000);
+                micl.Text = Convert.ToString(hecDouble * 100000000);
+                gal.Text = Convert.ToString(hecDouble * 21.99692483);
+                pint.Text = Convert.ToString(hecDouble * 175.97539864);
+                ounc.Text = Convert.ToString(hecDouble * 3519.5079728);
+                cubinch.Text = Convert.ToString(hecDouble * 6102.3744095);
+
+            }
+
+            mcub.TextChanging += Mcub_Changing;
+            litre.TextChanging += Litre_Changing;
+            decl.TextChanging += Decl_Changing;
+            mill.TextChanging += Mill_Changing;
+            micl.TextChanging += Micl_Changing;
+            gal.TextChanging += Gal_Changing;
+            pint.TextChanging += Pint_Changing;
+            ounc.TextChanging += Ounc_Changing;
+            cubinch.TextChanging += Cubinch_Changing;
+        }
+
+        private void Litre_Changing(TextBox sender, TextBoxTextChangingEventArgs args)
+        {
+            mcub.TextChanging -= Mcub_Changing;
+            hec.TextChanging -= Hec_Changing;
+            decl.TextChanging -= Decl_Changing;
+            mill.TextChanging -= Mill_Changing;
+            micl.TextChanging -= Micl_Changing;
+            gal.TextChanging -= Gal_Changing;
+            pint.TextChanging -= Pint_Changing;
+            ounc.TextChanging -= Ounc_Changing;
+            cubinch.TextChanging -= Cubinch_Changing;
+
+            if (litre.Text == "")
+            {
+                litre.Text = "0";
+            }
+            double litreDouble = 0;
+
+            if (double.TryParse(litre.Text, out litreDouble))
+            {
+                mcub.Text = Convert.ToString(litreDouble * 0.001);
+                hec.Text = Convert.ToString(litreDouble * 0.01);
+                decl.Text = Convert.ToString(litreDouble * 10);
+                mill.Text = Convert.ToString(litreDouble * 1000);
+                micl.Text = Convert.ToString(litreDouble * 1000000);
+                gal.Text = Convert.ToString(litreDouble * 0.2199692483);
+                pint.Text = Convert.ToString(litreDouble * 1.7597539864);
+                ounc.Text = Convert.ToString(litreDouble * 35.195079728);
+                cubinch.Text = Convert.ToString(litreDouble * 61.023744095);
+
+            }
+
+            mcub.TextChanging += Mcub_Changing;
+            hec.TextChanging += Hec_Changing;
+            decl.TextChanging += Decl_Changing;
+            mill.TextChanging += Mill_Changing;
+            micl.TextChanging += Micl_Changing;
+            gal.TextChanging += Gal_Changing;
+            pint.TextChanging += Pint_Changing;
+            ounc.TextChanging += Ounc_Changing;
+            cubinch.TextChanging += Cubinch_Changing;
+        }
+
+        private void Decl_Changing(TextBox sender, TextBoxTextChangingEventArgs args)
+        {
+            mcub.TextChanging -= Mcub_Changing;
+            hec.TextChanging -= Hec_Changing;
+            litre.TextChanging -= Litre_Changing;
+            mill.TextChanging -= Mill_Changing;
+            micl.TextChanging -= Micl_Changing;
+            gal.TextChanging -= Gal_Changing;
+            pint.TextChanging -= Pint_Changing;
+            ounc.TextChanging -= Ounc_Changing;
+            cubinch.TextChanging -= Cubinch_Changing;
+
+            if (decl.Text == "")
+            {
+                decl.Text = "0";
+            }
+            double declDouble = 0;
+
+            if (double.TryParse(decl.Text, out declDouble))
+            {
+                mcub.Text = Convert.ToString(declDouble * 0.0001);
+                hec.Text = Convert.ToString(declDouble * 0.001);
+                litre.Text = Convert.ToString(declDouble * 0.1);
+                mill.Text = Convert.ToString(declDouble * 100);
+                micl.Text = Convert.ToString(declDouble * 100000);
+                gal.Text = Convert.ToString(declDouble * 0.0219969248);
+                pint.Text = Convert.ToString(declDouble * 0.1759753986);
+                ounc.Text = Convert.ToString(declDouble * 3.5195079728);
+                cubinch.Text = Convert.ToString(declDouble * 6.1023744095);
+
+            }
+
+            mcub.TextChanging += Mcub_Changing;
+            hec.TextChanging += Hec_Changing;
+            litre.TextChanging += Litre_Changing;
+            mill.TextChanging += Mill_Changing;
+            micl.TextChanging += Micl_Changing;
+            gal.TextChanging += Gal_Changing;
+            pint.TextChanging += Pint_Changing;
+            ounc.TextChanging += Ounc_Changing;
+            cubinch.TextChanging += Cubinch_Changing;
+        }
+
+        private void Mill_Changing(TextBox sender, TextBoxTextChangingEventArgs args)
+        {
+            mcub.TextChanging -= Mcub_Changing;
+            hec.TextChanging -= Hec_Changing;
+            litre.TextChanging -= Litre_Changing;
+            decl.TextChanging -= Decl_Changing;
+            micl.TextChanging -= Micl_Changing;
+            gal.TextChanging -= Gal_Changing;
+            pint.TextChanging -= Pint_Changing;
+            ounc.TextChanging -= Ounc_Changing;
+            cubinch.TextChanging -= Cubinch_Changing;
+
+            if (mill.Text == "")
+            {
+                mill.Text = "0";
+            }
+            double millDouble = 0;
+
+            if (double.TryParse(mill.Text, out millDouble))
+            {
+                mcub.Text = Convert.ToString(millDouble * 0.000001);
+                hec.Text = Convert.ToString(millDouble * 0.00001);
+                litre.Text = Convert.ToString(millDouble * 0.001);
+                decl.Text = Convert.ToString(millDouble * 0.01);
+                micl.Text = Convert.ToString(millDouble * 1000);
+                gal.Text = Convert.ToString(millDouble * 0.0002199692);
+                pint.Text = Convert.ToString(millDouble * 0.001759754);
+                ounc.Text = Convert.ToString(millDouble * 0.0351950797);
+                cubinch.Text = Convert.ToString(millDouble * 0.0610237441);
+
+            }
+
+            mcub.TextChanging += Mcub_Changing;
+            hec.TextChanging += Hec_Changing;
+            litre.TextChanging += Litre_Changing;
+            decl.TextChanging += Decl_Changing;
+            micl.TextChanging += Micl_Changing;
+            gal.TextChanging += Gal_Changing;
+            pint.TextChanging += Pint_Changing;
+            ounc.TextChanging += Ounc_Changing;
+            cubinch.TextChanging += Cubinch_Changing;
+        }
+
+        private void Micl_Changing(TextBox sender, TextBoxTextChangingEventArgs args)
+        {
+            mcub.TextChanging -= Mcub_Changing;
+            hec.TextChanging -= Hec_Changing;
+            litre.TextChanging -= Litre_Changing;
+            decl.TextChanging -= Decl_Changing;
+            mill.TextChanging -= Mill_Changing;
+            gal.TextChanging -= Gal_Changing;
+            pint.TextChanging -= Pint_Changing;
+            ounc.TextChanging -= Ounc_Changing;
+            cubinch.TextChanging -= Cubinch_Changing;
+
+            if (micl.Text == "")
+            {
+                micl.Text = "0";
+            }
+            double miclDouble = 0;
+
+            if (double.TryParse(micl.Text, out miclDouble))
+            {
+                mcub.Text = Convert.ToString(miclDouble * 1e-9);
+                hec.Text = Convert.ToString(miclDouble * 1e-8);
+                litre.Text = Convert.ToString(miclDouble * 0.000001);
+                decl.Text = Convert.ToString(miclDouble * 0.00001);
+                mill.Text = Convert.ToString(miclDouble * 0.001);
+                gal.Text = Convert.ToString(miclDouble * 2.199692482e-7);
+                pint.Text = Convert.ToString(miclDouble * 0.0000017598);
+                ounc.Text = Convert.ToString(miclDouble * 0.0000351951);
+                cubinch.Text = Convert.ToString(miclDouble * 0.0000610237);
+
+            }
+
+            mcub.TextChanging += Mcub_Changing;
+            hec.TextChanging += Hec_Changing;
+            litre.TextChanging += Litre_Changing;
+            decl.TextChanging += Decl_Changing;
+            mill.TextChanging += Mill_Changing;
+            gal.TextChanging += Gal_Changing;
+            pint.TextChanging += Pint_Changing;
+            ounc.TextChanging += Ounc_Changing;
+            cubinch.TextChanging += Cubinch_Changing;
+        }
+
+        private void Gal_Changing(TextBox sender, TextBoxTextChangingEventArgs args)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void Pint_Changing(TextBox sender, TextBoxTextChangingEventArgs args)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void Ounc_Changing(TextBox sender, TextBoxTextChangingEventArgs args)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void Cubinch_Changing(TextBox sender, TextBoxTextChangingEventArgs args)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
