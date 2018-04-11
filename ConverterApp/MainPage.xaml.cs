@@ -1012,12 +1012,88 @@ namespace ConverterApp
 
         private void Cent_Changing(TextBox sender, TextBoxTextChangingEventArgs args)
         {
-            throw new NotImplementedException();
+            metre.TextChanging -= Met_Changing;
+            mil.TextChanging -= Mil_Changing;
+            microm.TextChanging -= Micm_Changing;
+            nanom.TextChanging -= Nanom_Changing;
+            ang.TextChanging -= Ang_Changing;
+            yard.TextChanging -= Yard_Changing;
+            foot.TextChanging -= Foot_Changing;
+            dec.TextChanging -= Dec_Changing;
+            inch.TextChanging -= Inch_Changing;
+
+            if (cent.Text == "")
+            {
+                cent.Text = "0";
+            }
+            double centDouble = 0;
+
+            if (double.TryParse(cent.Text, out centDouble))
+            {
+                dec.Text = Convert.ToString(centDouble * 0.1);
+                mil.Text = Convert.ToString(centDouble * 10);
+                microm.Text = Convert.ToString(centDouble * 10000);
+                nanom.Text = Convert.ToString(centDouble * 10000000);
+                ang.Text = Convert.ToString(centDouble * 100000000);
+                yard.Text = Convert.ToString(centDouble * 0.0109361329834);
+                foot.Text = Convert.ToString(centDouble * 0.0328083989501);
+                inch.Text = Convert.ToString(centDouble * 0.393700787402);
+                metre.Text = Convert.ToString(centDouble * 0.01);
+
+            }
+
+            dec.TextChanging += Dec_Changing;
+            mil.TextChanging += Mil_Changing;
+            microm.TextChanging += Micm_Changing;
+            nanom.TextChanging += Nanom_Changing;
+            ang.TextChanging += Ang_Changing;
+            yard.TextChanging += Yard_Changing;
+            foot.TextChanging += Foot_Changing;
+            inch.TextChanging += Inch_Changing;
+            metre.TextChanging += Met_Changing;
         }
 
         private void Dec_Changing(TextBox sender, TextBoxTextChangingEventArgs args)
         {
-            throw new NotImplementedException();
+            metre.TextChanging -= Met_Changing;
+            mil.TextChanging -= Mil_Changing;
+            microm.TextChanging -= Micm_Changing;
+            nanom.TextChanging -= Nanom_Changing;
+            ang.TextChanging -= Ang_Changing;
+            yard.TextChanging -= Yard_Changing;
+            foot.TextChanging -= Foot_Changing;
+            cent.TextChanging -= Cent_Changing;
+            inch.TextChanging -= Inch_Changing;
+
+            if (dec.Text == "")
+            {
+                dec.Text = "0";
+            }
+            double decDouble = 0;
+
+            if (double.TryParse(dec.Text, out decDouble))
+            {
+                cent.Text = Convert.ToString(decDouble * 0.1);
+                mil.Text = Convert.ToString(decDouble * 10);
+                microm.Text = Convert.ToString(decDouble * 10000);
+                nanom.Text = Convert.ToString(decDouble * 10000000);
+                ang.Text = Convert.ToString(decDouble * 100000000);
+                yard.Text = Convert.ToString(decDouble * 0.0109361329834);
+                foot.Text = Convert.ToString(decDouble * 0.0328083989501);
+                inch.Text = Convert.ToString(decDouble * 0.393700787402);
+                metre.Text = Convert.ToString(decDouble * 0.01);
+
+            }
+
+            cent.TextChanging += Cent_Changing;
+            mil.TextChanging += Mil_Changing;
+            microm.TextChanging += Micm_Changing;
+            nanom.TextChanging += Nanom_Changing;
+            ang.TextChanging += Ang_Changing;
+            yard.TextChanging += Yard_Changing;
+            foot.TextChanging += Foot_Changing;
+            inch.TextChanging += Inch_Changing;
+            metre.TextChanging += Met_Changing;
         }
     }
 }
