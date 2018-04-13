@@ -1,18 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
-using Windows.UI.Xaml;
+using System.Net;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
-
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
 namespace ConverterApp
@@ -26,7 +14,7 @@ namespace ConverterApp
         {
             this.InitializeComponent();
         }
-        
+
         private void Cel_Changing(object sender, TextBoxTextChangingEventArgs args)
         {
             fahrenheit.TextChanging -= Fah_Changing;
@@ -169,7 +157,7 @@ namespace ConverterApp
             stone.TextChanging -= Sto_Changing;
             pound.TextChanging -= Pou_Changing;
             ounce.TextChanging -= Oun_Changing;
-            carat.TextChanging -= Rand_Changing;
+            carat.TextChanging -= Carat_Changing;
 
             if (tonne.Text == "")
             {
@@ -201,7 +189,7 @@ namespace ConverterApp
             stone.TextChanging += Sto_Changing;
             pound.TextChanging += Pou_Changing;
             ounce.TextChanging += Oun_Changing;
-            carat.TextChanging += Rand_Changing;
+            carat.TextChanging += Carat_Changing;
         }
 
         private void Kilo_Changing(TextBox sender, TextBoxTextChangingEventArgs args)
@@ -215,7 +203,7 @@ namespace ConverterApp
             stone.TextChanging -= Sto_Changing;
             pound.TextChanging -= Pou_Changing;
             ounce.TextChanging -= Oun_Changing;
-            carat.TextChanging -= Rand_Changing;
+            carat.TextChanging -= Carat_Changing;
 
             if (kilo.Text == "")
             {
@@ -247,7 +235,7 @@ namespace ConverterApp
             stone.TextChanging += Sto_Changing;
             pound.TextChanging += Pou_Changing;
             ounce.TextChanging += Oun_Changing;
-            carat.TextChanging += Rand_Changing;
+            carat.TextChanging += Carat_Changing;
         }
 
         private void Gram_Changing(TextBox sender, TextBoxTextChangingEventArgs args)
@@ -261,7 +249,7 @@ namespace ConverterApp
             stone.TextChanging -= Sto_Changing;
             pound.TextChanging -= Pou_Changing;
             ounce.TextChanging -= Oun_Changing;
-            carat.TextChanging -= Rand_Changing;
+            carat.TextChanging -= Carat_Changing;
 
             if (gram.Text == "")
             {
@@ -293,7 +281,7 @@ namespace ConverterApp
             stone.TextChanging += Sto_Changing;
             pound.TextChanging += Pou_Changing;
             ounce.TextChanging += Oun_Changing;
-            carat.TextChanging += Rand_Changing;
+            carat.TextChanging += Carat_Changing;
         }
 
         private void Mil_Changing(TextBox sender, TextBoxTextChangingEventArgs args)
@@ -307,7 +295,7 @@ namespace ConverterApp
             stone.TextChanging -= Sto_Changing;
             pound.TextChanging -= Pou_Changing;
             ounce.TextChanging -= Oun_Changing;
-            carat.TextChanging -= Rand_Changing;
+            carat.TextChanging -= Carat_Changing;
 
             if (mlgram.Text == "")
             {
@@ -339,7 +327,7 @@ namespace ConverterApp
             stone.TextChanging += Sto_Changing;
             pound.TextChanging += Pou_Changing;
             ounce.TextChanging += Oun_Changing;
-            carat.TextChanging += Rand_Changing;
+            carat.TextChanging += Carat_Changing;
         }
 
         private void Mic_Changing(TextBox sender, TextBoxTextChangingEventArgs args)
@@ -353,7 +341,7 @@ namespace ConverterApp
             stone.TextChanging -= Sto_Changing;
             pound.TextChanging -= Pou_Changing;
             ounce.TextChanging -= Oun_Changing;
-            carat.TextChanging -= Rand_Changing;
+            carat.TextChanging -= Carat_Changing;
 
             if (micro.Text == "")
             {
@@ -385,7 +373,7 @@ namespace ConverterApp
             stone.TextChanging += Sto_Changing;
             pound.TextChanging += Pou_Changing;
             ounce.TextChanging += Oun_Changing;
-            carat.TextChanging += Rand_Changing;
+            carat.TextChanging += Carat_Changing;
         }
 
         private void Nano_Changing(TextBox sender, TextBoxTextChangingEventArgs args)
@@ -399,7 +387,7 @@ namespace ConverterApp
             stone.TextChanging -= Sto_Changing;
             pound.TextChanging -= Pou_Changing;
             ounce.TextChanging -= Oun_Changing;
-            carat.TextChanging -= Rand_Changing;
+            carat.TextChanging -= Carat_Changing;
 
             if (nano.Text == "")
             {
@@ -431,7 +419,7 @@ namespace ConverterApp
             stone.TextChanging += Sto_Changing;
             pound.TextChanging += Pou_Changing;
             ounce.TextChanging += Oun_Changing;
-            carat.TextChanging += Rand_Changing;
+            carat.TextChanging += Carat_Changing;
         }
 
         private void Pico_Changing(TextBox sender, TextBoxTextChangingEventArgs args)
@@ -445,7 +433,7 @@ namespace ConverterApp
             stone.TextChanging -= Sto_Changing;
             pound.TextChanging -= Pou_Changing;
             ounce.TextChanging -= Oun_Changing;
-            carat.TextChanging -= Rand_Changing;
+            carat.TextChanging -= Carat_Changing;
 
             if (pico.Text == "")
             {
@@ -477,7 +465,7 @@ namespace ConverterApp
             stone.TextChanging += Sto_Changing;
             pound.TextChanging += Pou_Changing;
             ounce.TextChanging += Oun_Changing;
-            carat.TextChanging += Rand_Changing;
+            carat.TextChanging += Carat_Changing;
         }
 
         private void Sto_Changing(TextBox sender, TextBoxTextChangingEventArgs args)
@@ -491,7 +479,7 @@ namespace ConverterApp
             pico.TextChanging -= Pico_Changing;
             pound.TextChanging -= Pou_Changing;
             ounce.TextChanging -= Oun_Changing;
-            carat.TextChanging -= Rand_Changing;
+            carat.TextChanging -= Carat_Changing;
 
             if (stone.Text == "")
             {
@@ -523,7 +511,7 @@ namespace ConverterApp
             pico.TextChanging += Pico_Changing;
             pound.TextChanging += Pou_Changing;
             ounce.TextChanging += Oun_Changing;
-            carat.TextChanging += Rand_Changing;
+            carat.TextChanging += Carat_Changing;
         }
 
         private void Pou_Changing(TextBox sender, TextBoxTextChangingEventArgs args)
@@ -537,7 +525,7 @@ namespace ConverterApp
             pico.TextChanging -= Pico_Changing;
             stone.TextChanging -= Sto_Changing;
             ounce.TextChanging -= Oun_Changing;
-            carat.TextChanging -= Rand_Changing;
+            carat.TextChanging -= Carat_Changing;
 
             if (pound.Text == "")
             {
@@ -569,7 +557,7 @@ namespace ConverterApp
             pico.TextChanging += Pico_Changing;
             stone.TextChanging += Sto_Changing;
             ounce.TextChanging += Oun_Changing;
-            carat.TextChanging += Rand_Changing;
+            carat.TextChanging += Carat_Changing;
         }
 
         private void Oun_Changing(TextBox sender, TextBoxTextChangingEventArgs args)
@@ -583,7 +571,7 @@ namespace ConverterApp
             pico.TextChanging -= Pico_Changing;
             stone.TextChanging -= Sto_Changing;
             pound.TextChanging -= Pou_Changing;
-            carat.TextChanging -= Rand_Changing;
+            carat.TextChanging -= Carat_Changing;
 
             if (ounce.Text == "")
             {
@@ -615,10 +603,10 @@ namespace ConverterApp
             pico.TextChanging += Pico_Changing;
             stone.TextChanging += Sto_Changing;
             pound.TextChanging += Pou_Changing;
-            carat.TextChanging += Rand_Changing;
+            carat.TextChanging += Carat_Changing;
         }
 
-        private void Rand_Changing(TextBox sender, TextBoxTextChangingEventArgs args)
+        private void Carat_Changing(TextBox sender, TextBoxTextChangingEventArgs args)
         {
             tonne.TextChanging -= Ton_Changing;
             kilo.TextChanging -= Kilo_Changing;
@@ -684,15 +672,15 @@ namespace ConverterApp
 
             if (double.TryParse(metre.Text, out metreDouble))
             {
-                dec.Text = Convert.ToString(metreDouble * 2e-7);
-                cent.Text = Convert.ToString(metreDouble * 0.0002);
-                mil.Text = Convert.ToString(metreDouble * 0.2);
-                microm.Text = Convert.ToString(metreDouble * 200);
-                nanom.Text = Convert.ToString(metreDouble * 200000000);
-                ang.Text = Convert.ToString(metreDouble * 200000000000);
-                yard.Text = Convert.ToString(metreDouble * 0.0000314946088836);
-                foot.Text = Convert.ToString(metreDouble * 0.00044092452437);
-                inch.Text = Convert.ToString(metreDouble * 0.00705479238992);
+                dec.Text = Convert.ToString(metreDouble * 10);
+                cent.Text = Convert.ToString(metreDouble * 100);
+                mil.Text = Convert.ToString(metreDouble * 1000);
+                microm.Text = Convert.ToString(metreDouble * 1e+6);
+                nanom.Text = Convert.ToString(metreDouble * 1e+9);
+                ang.Text = Convert.ToString(metreDouble * 1e+10);
+                yard.Text = Convert.ToString(metreDouble * 1.09361);
+                foot.Text = Convert.ToString(metreDouble * 3.28083);
+                inch.Text = Convert.ToString(metreDouble * 39.36996);
                 
             }
 
@@ -1932,7 +1920,7 @@ namespace ConverterApp
             double gbDouble = 0;
             if (double.TryParse(gb.Text, out gbDouble))
             {
-                b.Text = Convert.ToString(gbDouble * 8e+9);
+                b.Text = Convert.ToString(gbDouble * 1e+9);
                 kb.Text = Convert.ToString(gbDouble * 1000000);
                 mb.Text = Convert.ToString(gbDouble * 1000);
                 tb.Text = Convert.ToString(gbDouble * 0.001);
@@ -2017,37 +2005,498 @@ namespace ConverterApp
             can.TextChanging -= Can_Changing;
             rand.TextChanging -= Rand_Changing;
 
-            if (tonne.Text == "")
+            if (eur.Text == "")
             {
-                tonne.Text = "0";
+                eur.Text = "0";
             }
-            double tonDouble = 0;
+            double eurDouble = 0;
 
-            if (double.TryParse(tonne.Text, out tonDouble))
+            if (double.TryParse(eur.Text, out eurDouble))
             {
-                kilo.Text = Convert.ToString(tonDouble * Math.Pow(10, 3));
-                gram.Text = Convert.ToString(tonDouble * Math.Pow(10, 6));
-                mlgram.Text = Convert.ToString(tonDouble * Math.Pow(10, 9));
-                micro.Text = Convert.ToString(tonDouble * Math.Pow(10, 12));
-                nano.Text = Convert.ToString(tonDouble * Math.Pow(10, 15));
-                pico.Text = Convert.ToString(tonDouble * Math.Pow(10, 18));
-                stone.Text = Convert.ToString(tonDouble * 157.473044);
-                pound.Text = Convert.ToString(tonDouble / 0.00045359237);
-                ounce.Text = Convert.ToString(tonDouble / 0.0000283495231);
-                carat.Text = Convert.ToString(tonDouble * 5000000);
+                ste.Text = Convert.ToString(eurDouble * 0.86);
+                usd.Text = Convert.ToString(eurDouble * 1.23);
+                ad.Text = Convert.ToString(eurDouble * 1.58);
+                yen.Text = Convert.ToString(eurDouble * 132.73);
+                rub.Text = Convert.ToString(eurDouble * 76.12);
+                bah.Text = Convert.ToString(eurDouble * 38.39);
+                rup.Text = Convert.ToString(eurDouble * 80.431);
+                peso.Text = Convert.ToString(eurDouble * 22.31);
+                can.Text = Convert.ToString(eurDouble * 1.55);
+                rand.Text = Convert.ToString(eurDouble * 14.84);
 
             }
 
-            kilo.TextChanging += Kilo_Changing;
-            gram.TextChanging += Gram_Changing;
-            mlgram.TextChanging += Mil_Changing;
-            micro.TextChanging += Mic_Changing;
-            nano.TextChanging += Nano_Changing;
-            pico.TextChanging += Pico_Changing;
-            stone.TextChanging += Sto_Changing;
-            pound.TextChanging += Pou_Changing;
-            ounce.TextChanging += Oun_Changing;
-            carat.TextChanging += Rand_Changing;
+            ste.TextChanging += Ste_Changing;
+            usd.TextChanging += Usd_Changing;
+            ad.TextChanging += Ad_Changing;
+            yen.TextChanging += Yen_Changing;
+            rub.TextChanging += Rub_Changing;
+            bah.TextChanging += Bah_Changing;
+            rup.TextChanging += Rup_Changing;
+            peso.TextChanging += Peso_Changing;
+            can.TextChanging += Can_Changing;
+            rand.TextChanging += Rand_Changing;
+        }
+
+        private void Ste_Changing(TextBox sender, TextBoxTextChangingEventArgs args)
+        {
+            eur.TextChanging -= Eur_Changing;
+            usd.TextChanging -= Usd_Changing;
+            ad.TextChanging -= Ad_Changing;
+            yen.TextChanging -= Yen_Changing;
+            rub.TextChanging -= Rub_Changing;
+            bah.TextChanging -= Bah_Changing;
+            rup.TextChanging -= Rup_Changing;
+            peso.TextChanging -= Peso_Changing;
+            can.TextChanging -= Can_Changing;
+            rand.TextChanging -= Rand_Changing;
+
+            if (ste.Text == "")
+            {
+                ste.Text = "0";
+            }
+            double steDouble = 0;
+
+            if (double.TryParse(ste.Text, out steDouble))
+            {
+                eur.Text = Convert.ToString(steDouble * 1.16);
+                usd.Text = Convert.ToString(steDouble * 1.43);
+                ad.Text = Convert.ToString(steDouble * 1.83);
+                yen.Text = Convert.ToString(steDouble * 153.64);
+                rub.Text = Convert.ToString(steDouble * 88.20);
+                bah.Text = Convert.ToString(steDouble * 44.44);
+                rup.Text = Convert.ToString(steDouble * 93.13);
+                peso.Text = Convert.ToString(steDouble * 25.82);
+                can.Text = Convert.ToString(steDouble * 1.79);
+                rand.Text = Convert.ToString(steDouble * 17.19);
+
+            }
+
+            eur.TextChanging += Eur_Changing;
+            usd.TextChanging += Usd_Changing;
+            ad.TextChanging += Ad_Changing;
+            yen.TextChanging += Yen_Changing;
+            rub.TextChanging += Rub_Changing;
+            bah.TextChanging += Bah_Changing;
+            rup.TextChanging += Rup_Changing;
+            peso.TextChanging += Peso_Changing;
+            can.TextChanging += Can_Changing;
+            rand.TextChanging += Rand_Changing;
+        }
+
+        private void Usd_Changing(TextBox sender, TextBoxTextChangingEventArgs args)
+        {
+            eur.TextChanging -= Eur_Changing;
+            ste.TextChanging -= Ste_Changing;
+            ad.TextChanging -= Ad_Changing;
+            yen.TextChanging -= Yen_Changing;
+            rub.TextChanging -= Rub_Changing;
+            bah.TextChanging -= Bah_Changing;
+            rup.TextChanging -= Rup_Changing;
+            peso.TextChanging -= Peso_Changing;
+            can.TextChanging -= Can_Changing;
+            rand.TextChanging -= Rand_Changing;
+
+            if (usd.Text == "")
+            {
+                usd.Text = "0";
+            }
+            double usdDouble = 0;
+
+            if (double.TryParse(usd.Text, out usdDouble))
+            {
+                eur.Text = Convert.ToString(usdDouble * 0.81);
+                ste.Text = Convert.ToString(usdDouble * 0.70);
+                ad.Text = Convert.ToString(usdDouble * 1.28);
+                yen.Text = Convert.ToString(usdDouble * 107.70);
+                rub.Text = Convert.ToString(usdDouble * 61.85);
+                bah.Text = Convert.ToString(usdDouble * 31.15);
+                rup.Text = Convert.ToString(usdDouble * 65.27);
+                peso.Text = Convert.ToString(usdDouble * 18.10);
+                can.Text = Convert.ToString(usdDouble * 1.26);
+                rand.Text = Convert.ToString(usdDouble * 12.05);
+
+            }
+
+            eur.TextChanging += Eur_Changing;
+            ste.TextChanging += Ste_Changing;
+            ad.TextChanging += Ad_Changing;
+            yen.TextChanging += Yen_Changing;
+            rub.TextChanging += Rub_Changing;
+            bah.TextChanging += Bah_Changing;
+            rup.TextChanging += Rup_Changing;
+            peso.TextChanging += Peso_Changing;
+            can.TextChanging += Can_Changing;
+            rand.TextChanging += Rand_Changing;
+        }
+
+        private void Ad_Changing(TextBox sender, TextBoxTextChangingEventArgs args)
+        {
+            eur.TextChanging -= Eur_Changing;
+            ste.TextChanging -= Ste_Changing;
+            usd.TextChanging -= Usd_Changing;
+            yen.TextChanging -= Yen_Changing;
+            rub.TextChanging -= Rub_Changing;
+            bah.TextChanging -= Bah_Changing;
+            rup.TextChanging -= Rup_Changing;
+            peso.TextChanging -= Peso_Changing;
+            can.TextChanging -= Can_Changing;
+            rand.TextChanging -= Rand_Changing;
+
+            if (ad.Text == "")
+            {
+                ad.Text = "0";
+            }
+            double adDouble = 0;
+
+            if (double.TryParse(ad.Text, out adDouble))
+            {
+                eur.Text = Convert.ToString(adDouble * 0.63);
+                ste.Text = Convert.ToString(adDouble * 0.55);
+                usd.Text = Convert.ToString(adDouble * 0.78);
+                yen.Text = Convert.ToString(adDouble * 83.93);
+                rub.Text = Convert.ToString(adDouble * 48.20);
+                bah.Text = Convert.ToString(adDouble * 24.28);
+                rup.Text = Convert.ToString(adDouble * 50.88);
+                peso.Text = Convert.ToString(adDouble * 14.11);
+                can.Text = Convert.ToString(adDouble * 0.98);
+                rand.Text = Convert.ToString(adDouble * 9.39);
+
+            }
+
+            eur.TextChanging += Eur_Changing;
+            ste.TextChanging += Ste_Changing;
+            usd.TextChanging += Usd_Changing;
+            yen.TextChanging += Yen_Changing;
+            rub.TextChanging += Rub_Changing;
+            bah.TextChanging += Bah_Changing;
+            rup.TextChanging += Rup_Changing;
+            peso.TextChanging += Peso_Changing;
+            can.TextChanging += Can_Changing;
+            rand.TextChanging += Rand_Changing;
+        }
+
+        private void Yen_Changing(TextBox sender, TextBoxTextChangingEventArgs args)
+        {
+            eur.TextChanging -= Eur_Changing;
+            ste.TextChanging -= Ste_Changing;
+            usd.TextChanging -= Usd_Changing;
+            ad.TextChanging -= Ad_Changing;
+            rub.TextChanging -= Rub_Changing;
+            bah.TextChanging -= Bah_Changing;
+            rup.TextChanging -= Rup_Changing;
+            peso.TextChanging -= Peso_Changing;
+            can.TextChanging -= Can_Changing;
+            rand.TextChanging -= Rand_Changing;
+
+            if (yen.Text == "")
+            {
+                yen.Text = "0";
+            }
+            double yenDouble = 0;
+
+            if (double.TryParse(yen.Text, out yenDouble))
+            {
+                eur.Text = Convert.ToString(yenDouble * 0.0075);
+                ste.Text = Convert.ToString(yenDouble * 0.0065);
+                usd.Text = Convert.ToString(yenDouble * 0.0093);
+                ad.Text = Convert.ToString(yenDouble * 0.012);
+                rub.Text = Convert.ToString(yenDouble * 0.57);
+                bah.Text = Convert.ToString(yenDouble * 0.29);
+                rup.Text = Convert.ToString(yenDouble * 0.61);
+                peso.Text = Convert.ToString(yenDouble * 0.17);
+                can.Text = Convert.ToString(yenDouble * 0.012);
+                rand.Text = Convert.ToString(yenDouble * 0.11);
+
+            }
+
+            eur.TextChanging += Eur_Changing;
+            ste.TextChanging += Ste_Changing;
+            usd.TextChanging += Usd_Changing;
+            ad.TextChanging += Ad_Changing;
+            rub.TextChanging += Rub_Changing;
+            bah.TextChanging += Bah_Changing;
+            rup.TextChanging += Rup_Changing;
+            peso.TextChanging += Peso_Changing;
+            can.TextChanging += Can_Changing;
+            rand.TextChanging += Rand_Changing;
+        }
+
+        private void Rub_Changing(TextBox sender, TextBoxTextChangingEventArgs args)
+        {
+            eur.TextChanging -= Eur_Changing;
+            ste.TextChanging -= Ste_Changing;
+            usd.TextChanging -= Usd_Changing;
+            ad.TextChanging -= Ad_Changing;
+            yen.TextChanging -= Yen_Changing;
+            bah.TextChanging -= Bah_Changing;
+            rup.TextChanging -= Rup_Changing;
+            peso.TextChanging -= Peso_Changing;
+            can.TextChanging -= Can_Changing;
+            rand.TextChanging -= Rand_Changing;
+
+            if (rub.Text == "")
+            {
+                rub.Text = "0";
+            }
+            double rubDouble = 0;
+
+            if (double.TryParse(rub.Text, out rubDouble))
+            {
+                eur.Text = Convert.ToString(rubDouble * 0.013);
+                ste.Text = Convert.ToString(rubDouble * 0.011);
+                usd.Text = Convert.ToString(rubDouble * 0.016);
+                ad.Text = Convert.ToString(rubDouble * 0.021);
+                yen.Text = Convert.ToString(rubDouble * 1.74);
+                bah.Text = Convert.ToString(rubDouble * 0.5);
+                rup.Text = Convert.ToString(rubDouble * 1.05);
+                peso.Text = Convert.ToString(rubDouble * 0.29);
+                can.Text = Convert.ToString(rubDouble * 0.020);
+                rand.Text = Convert.ToString(rubDouble * 0.19);
+
+            }
+
+            eur.TextChanging += Eur_Changing;
+            ste.TextChanging += Ste_Changing;
+            usd.TextChanging += Usd_Changing;
+            ad.TextChanging += Ad_Changing;
+            yen.TextChanging += Yen_Changing;
+            bah.TextChanging += Bah_Changing;
+            rup.TextChanging += Rup_Changing;
+            peso.TextChanging += Peso_Changing;
+            can.TextChanging += Can_Changing;
+            rand.TextChanging += Rand_Changing;
+        }
+
+        private void Bah_Changing(TextBox sender, TextBoxTextChangingEventArgs args)
+        {
+            eur.TextChanging -= Eur_Changing;
+            ste.TextChanging -= Ste_Changing;
+            usd.TextChanging -= Usd_Changing;
+            ad.TextChanging -= Ad_Changing;
+            yen.TextChanging -= Yen_Changing;
+            rub.TextChanging -= Rub_Changing;
+            rup.TextChanging -= Rup_Changing;
+            peso.TextChanging -= Peso_Changing;
+            can.TextChanging -= Can_Changing;
+            rand.TextChanging -= Rand_Changing;
+
+            if (bah.Text == "")
+            {
+                bah.Text = "0";
+            }
+            double bahDouble = 0;
+
+            if (double.TryParse(bah.Text, out bahDouble))
+            {
+                eur.Text = Convert.ToString(bahDouble * 0.026);
+                ste.Text = Convert.ToString(bahDouble * 0.023);
+                usd.Text = Convert.ToString(bahDouble * 0.032);
+                ad.Text = Convert.ToString(bahDouble * 0.041);
+                yen.Text = Convert.ToString(bahDouble * 3.46);
+                rub.Text = Convert.ToString(bahDouble * 1.99);
+                rup.Text = Convert.ToString(bahDouble * 2.10);
+                peso.Text = Convert.ToString(bahDouble * 0.58);
+                can.Text = Convert.ToString(bahDouble * 0.040);
+                rand.Text = Convert.ToString(bahDouble * 0.39);
+
+            }
+
+            eur.TextChanging += Eur_Changing;
+            ste.TextChanging += Ste_Changing;
+            usd.TextChanging += Usd_Changing;
+            ad.TextChanging += Ad_Changing;
+            yen.TextChanging += Yen_Changing;
+            rub.TextChanging += Rub_Changing;
+            rup.TextChanging += Rup_Changing;
+            peso.TextChanging += Peso_Changing;
+            can.TextChanging += Can_Changing;
+            rand.TextChanging += Rand_Changing;
+        }
+
+        private void Rup_Changing(TextBox sender, TextBoxTextChangingEventArgs args)
+        {
+            eur.TextChanging -= Eur_Changing;
+            ste.TextChanging -= Ste_Changing;
+            usd.TextChanging -= Usd_Changing;
+            ad.TextChanging -= Ad_Changing;
+            yen.TextChanging -= Yen_Changing;
+            rub.TextChanging -= Rub_Changing;
+            bah.TextChanging -= Bah_Changing;
+            peso.TextChanging -= Peso_Changing;
+            can.TextChanging -= Can_Changing;
+            rand.TextChanging -= Rand_Changing;
+
+            if (rup.Text == "")
+            {
+                rup.Text = "0";
+            }
+            double rupDouble = 0;
+
+            if (double.TryParse(rup.Text, out rupDouble))
+            {
+                eur.Text = Convert.ToString(rupDouble * 0.012);
+                ste.Text = Convert.ToString(rupDouble * 0.011);
+                usd.Text = Convert.ToString(rupDouble * 0.015);
+                ad.Text = Convert.ToString(rupDouble * 0.020);
+                yen.Text = Convert.ToString(rupDouble * 1.65);
+                rub.Text = Convert.ToString(rupDouble * 0.95);
+                bah.Text = Convert.ToString(rupDouble * 0.48);
+                peso.Text = Convert.ToString(rupDouble * 0.28);
+                can.Text = Convert.ToString(rupDouble * 0.019);
+                rand.Text = Convert.ToString(rupDouble * 0.18);
+
+            }
+
+            eur.TextChanging += Eur_Changing;
+            ste.TextChanging += Ste_Changing;
+            usd.TextChanging += Usd_Changing;
+            ad.TextChanging += Ad_Changing;
+            yen.TextChanging += Yen_Changing;
+            rub.TextChanging += Rub_Changing;
+            bah.TextChanging += Bah_Changing;
+            peso.TextChanging += Peso_Changing;
+            can.TextChanging += Can_Changing;
+            rand.TextChanging += Rand_Changing;
+        }
+
+        private void Peso_Changing(TextBox sender, TextBoxTextChangingEventArgs args)
+        {
+            eur.TextChanging -= Eur_Changing;
+            ste.TextChanging -= Ste_Changing;
+            usd.TextChanging -= Usd_Changing;
+            ad.TextChanging -= Ad_Changing;
+            yen.TextChanging -= Yen_Changing;
+            rub.TextChanging -= Rub_Changing;
+            bah.TextChanging -= Bah_Changing;
+            rup.TextChanging -= Rup_Changing;
+            can.TextChanging -= Can_Changing;
+            rand.TextChanging -= Rand_Changing;
+
+            if (peso.Text == "")
+            {
+                peso.Text = "0";
+            }
+            double pesoDouble = 0;
+
+            if (double.TryParse(peso.Text, out pesoDouble))
+            {
+                eur.Text = Convert.ToString(pesoDouble * 0.045);
+                ste.Text = Convert.ToString(pesoDouble * 0.039);
+                usd.Text = Convert.ToString(pesoDouble * 0.055);
+                ad.Text = Convert.ToString(pesoDouble * 0.071);
+                yen.Text = Convert.ToString(pesoDouble * 5.96);
+                rub.Text = Convert.ToString(pesoDouble * 3.42);
+                bah.Text = Convert.ToString(pesoDouble * 1.72);
+                rup.Text = Convert.ToString(pesoDouble * 3.61);
+                can.Text = Convert.ToString(pesoDouble * 0.070);
+                rand.Text = Convert.ToString(pesoDouble * 0.67);
+
+            }
+
+            eur.TextChanging += Eur_Changing;
+            ste.TextChanging += Ste_Changing;
+            usd.TextChanging += Usd_Changing;
+            ad.TextChanging += Ad_Changing;
+            yen.TextChanging += Yen_Changing;
+            rub.TextChanging += Rub_Changing;
+            bah.TextChanging += Bah_Changing;
+            rup.TextChanging += Rup_Changing;
+            can.TextChanging += Can_Changing;
+            rand.TextChanging += Rand_Changing;
+        }
+
+        private void Can_Changing(TextBox sender, TextBoxTextChangingEventArgs args)
+        {
+            eur.TextChanging -= Eur_Changing;
+            ste.TextChanging -= Ste_Changing;
+            usd.TextChanging -= Usd_Changing;
+            ad.TextChanging -= Ad_Changing;
+            yen.TextChanging -= Yen_Changing;
+            rub.TextChanging -= Rub_Changing;
+            bah.TextChanging -= Bah_Changing;
+            rup.TextChanging -= Rup_Changing;
+            peso.TextChanging -= Peso_Changing;
+            rand.TextChanging -= Rand_Changing;
+
+            if (can.Text == "")
+            {
+                can.Text = "0";
+            }
+            double canDouble = 0;
+
+            if (double.TryParse(can.Text, out canDouble))
+            {
+                eur.Text = Convert.ToString(canDouble * 0.65);
+                ste.Text = Convert.ToString(canDouble * 0.56);
+                usd.Text = Convert.ToString(canDouble * 0.79);
+                ad.Text = Convert.ToString(canDouble * 1.02);
+                yen.Text = Convert.ToString(canDouble * 85.67);
+                rub.Text = Convert.ToString(canDouble * 49.23);
+                bah.Text = Convert.ToString(canDouble * 24.76);
+                rup.Text = Convert.ToString(canDouble * 51.88);
+                peso.Text = Convert.ToString(canDouble * 14.37);
+                rand.Text = Convert.ToString(canDouble * 9.59);
+
+            }
+
+            eur.TextChanging += Eur_Changing;
+            ste.TextChanging += Ste_Changing;
+            usd.TextChanging += Usd_Changing;
+            ad.TextChanging += Ad_Changing;
+            yen.TextChanging += Yen_Changing;
+            rub.TextChanging += Rub_Changing;
+            bah.TextChanging += Bah_Changing;
+            rup.TextChanging += Rup_Changing;
+            peso.TextChanging += Peso_Changing;
+            rand.TextChanging += Rand_Changing;
+        }
+
+        private void Rand_Changing(TextBox sender, TextBoxTextChangingEventArgs args)
+        {
+            eur.TextChanging -= Eur_Changing;
+            ste.TextChanging -= Ste_Changing;
+            usd.TextChanging -= Usd_Changing;
+            ad.TextChanging -= Ad_Changing;
+            yen.TextChanging -= Yen_Changing;
+            rub.TextChanging -= Rub_Changing;
+            bah.TextChanging -= Bah_Changing;
+            rup.TextChanging -= Rup_Changing;
+            peso.TextChanging -= Peso_Changing;
+            can.TextChanging -= Can_Changing;
+
+            if (rand.Text == "")
+            {
+                rand.Text = "0";
+            }
+            double randDouble = 0;
+
+            if (double.TryParse(rand.Text, out randDouble))
+            {
+                eur.Text = Convert.ToString(randDouble * 0.067);
+                ste.Text = Convert.ToString(randDouble * 0.058);
+                usd.Text = Convert.ToString(randDouble * 0.083);
+                ad.Text = Convert.ToString(randDouble * 0.11);
+                yen.Text = Convert.ToString(randDouble * 8.92);
+                rub.Text = Convert.ToString(randDouble * 5.13);
+                bah.Text = Convert.ToString(randDouble * 2.58);
+                rup.Text = Convert.ToString(randDouble * 5.4);
+                peso.Text = Convert.ToString(randDouble * 1.5);
+                can.Text = Convert.ToString(randDouble * 0.1);
+
+            }
+
+            eur.TextChanging += Eur_Changing;
+            ste.TextChanging += Ste_Changing;
+            usd.TextChanging += Usd_Changing;
+            ad.TextChanging += Ad_Changing;
+            yen.TextChanging += Yen_Changing;
+            rub.TextChanging += Rub_Changing;
+            bah.TextChanging += Bah_Changing;
+            rup.TextChanging += Rup_Changing;
+            peso.TextChanging += Peso_Changing;
+            can.TextChanging += Can_Changing;
         }
     }
+    
 }
