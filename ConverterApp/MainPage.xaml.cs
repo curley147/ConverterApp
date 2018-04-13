@@ -169,7 +169,7 @@ namespace ConverterApp
             stone.TextChanging -= Sto_Changing;
             pound.TextChanging -= Pou_Changing;
             ounce.TextChanging -= Oun_Changing;
-            carat.TextChanging -= Car_Changing;
+            carat.TextChanging -= Rand_Changing;
 
             if (tonne.Text == "")
             {
@@ -201,7 +201,7 @@ namespace ConverterApp
             stone.TextChanging += Sto_Changing;
             pound.TextChanging += Pou_Changing;
             ounce.TextChanging += Oun_Changing;
-            carat.TextChanging += Car_Changing;
+            carat.TextChanging += Rand_Changing;
         }
 
         private void Kilo_Changing(TextBox sender, TextBoxTextChangingEventArgs args)
@@ -215,7 +215,7 @@ namespace ConverterApp
             stone.TextChanging -= Sto_Changing;
             pound.TextChanging -= Pou_Changing;
             ounce.TextChanging -= Oun_Changing;
-            carat.TextChanging -= Car_Changing;
+            carat.TextChanging -= Rand_Changing;
 
             if (kilo.Text == "")
             {
@@ -247,7 +247,7 @@ namespace ConverterApp
             stone.TextChanging += Sto_Changing;
             pound.TextChanging += Pou_Changing;
             ounce.TextChanging += Oun_Changing;
-            carat.TextChanging += Car_Changing;
+            carat.TextChanging += Rand_Changing;
         }
 
         private void Gram_Changing(TextBox sender, TextBoxTextChangingEventArgs args)
@@ -261,7 +261,7 @@ namespace ConverterApp
             stone.TextChanging -= Sto_Changing;
             pound.TextChanging -= Pou_Changing;
             ounce.TextChanging -= Oun_Changing;
-            carat.TextChanging -= Car_Changing;
+            carat.TextChanging -= Rand_Changing;
 
             if (gram.Text == "")
             {
@@ -293,7 +293,7 @@ namespace ConverterApp
             stone.TextChanging += Sto_Changing;
             pound.TextChanging += Pou_Changing;
             ounce.TextChanging += Oun_Changing;
-            carat.TextChanging += Car_Changing;
+            carat.TextChanging += Rand_Changing;
         }
 
         private void Mil_Changing(TextBox sender, TextBoxTextChangingEventArgs args)
@@ -307,7 +307,7 @@ namespace ConverterApp
             stone.TextChanging -= Sto_Changing;
             pound.TextChanging -= Pou_Changing;
             ounce.TextChanging -= Oun_Changing;
-            carat.TextChanging -= Car_Changing;
+            carat.TextChanging -= Rand_Changing;
 
             if (mlgram.Text == "")
             {
@@ -339,7 +339,7 @@ namespace ConverterApp
             stone.TextChanging += Sto_Changing;
             pound.TextChanging += Pou_Changing;
             ounce.TextChanging += Oun_Changing;
-            carat.TextChanging += Car_Changing;
+            carat.TextChanging += Rand_Changing;
         }
 
         private void Mic_Changing(TextBox sender, TextBoxTextChangingEventArgs args)
@@ -353,7 +353,7 @@ namespace ConverterApp
             stone.TextChanging -= Sto_Changing;
             pound.TextChanging -= Pou_Changing;
             ounce.TextChanging -= Oun_Changing;
-            carat.TextChanging -= Car_Changing;
+            carat.TextChanging -= Rand_Changing;
 
             if (micro.Text == "")
             {
@@ -385,7 +385,7 @@ namespace ConverterApp
             stone.TextChanging += Sto_Changing;
             pound.TextChanging += Pou_Changing;
             ounce.TextChanging += Oun_Changing;
-            carat.TextChanging += Car_Changing;
+            carat.TextChanging += Rand_Changing;
         }
 
         private void Nano_Changing(TextBox sender, TextBoxTextChangingEventArgs args)
@@ -399,7 +399,7 @@ namespace ConverterApp
             stone.TextChanging -= Sto_Changing;
             pound.TextChanging -= Pou_Changing;
             ounce.TextChanging -= Oun_Changing;
-            carat.TextChanging -= Car_Changing;
+            carat.TextChanging -= Rand_Changing;
 
             if (nano.Text == "")
             {
@@ -431,7 +431,7 @@ namespace ConverterApp
             stone.TextChanging += Sto_Changing;
             pound.TextChanging += Pou_Changing;
             ounce.TextChanging += Oun_Changing;
-            carat.TextChanging += Car_Changing;
+            carat.TextChanging += Rand_Changing;
         }
 
         private void Pico_Changing(TextBox sender, TextBoxTextChangingEventArgs args)
@@ -445,7 +445,7 @@ namespace ConverterApp
             stone.TextChanging -= Sto_Changing;
             pound.TextChanging -= Pou_Changing;
             ounce.TextChanging -= Oun_Changing;
-            carat.TextChanging -= Car_Changing;
+            carat.TextChanging -= Rand_Changing;
 
             if (pico.Text == "")
             {
@@ -477,7 +477,7 @@ namespace ConverterApp
             stone.TextChanging += Sto_Changing;
             pound.TextChanging += Pou_Changing;
             ounce.TextChanging += Oun_Changing;
-            carat.TextChanging += Car_Changing;
+            carat.TextChanging += Rand_Changing;
         }
 
         private void Sto_Changing(TextBox sender, TextBoxTextChangingEventArgs args)
@@ -491,7 +491,7 @@ namespace ConverterApp
             pico.TextChanging -= Pico_Changing;
             pound.TextChanging -= Pou_Changing;
             ounce.TextChanging -= Oun_Changing;
-            carat.TextChanging -= Car_Changing;
+            carat.TextChanging -= Rand_Changing;
 
             if (stone.Text == "")
             {
@@ -523,7 +523,7 @@ namespace ConverterApp
             pico.TextChanging += Pico_Changing;
             pound.TextChanging += Pou_Changing;
             ounce.TextChanging += Oun_Changing;
-            carat.TextChanging += Car_Changing;
+            carat.TextChanging += Rand_Changing;
         }
 
         private void Pou_Changing(TextBox sender, TextBoxTextChangingEventArgs args)
@@ -537,7 +537,7 @@ namespace ConverterApp
             pico.TextChanging -= Pico_Changing;
             stone.TextChanging -= Sto_Changing;
             ounce.TextChanging -= Oun_Changing;
-            carat.TextChanging -= Car_Changing;
+            carat.TextChanging -= Rand_Changing;
 
             if (pound.Text == "")
             {
@@ -569,7 +569,7 @@ namespace ConverterApp
             pico.TextChanging += Pico_Changing;
             stone.TextChanging += Sto_Changing;
             ounce.TextChanging += Oun_Changing;
-            carat.TextChanging += Car_Changing;
+            carat.TextChanging += Rand_Changing;
         }
 
         private void Oun_Changing(TextBox sender, TextBoxTextChangingEventArgs args)
@@ -583,7 +583,7 @@ namespace ConverterApp
             pico.TextChanging -= Pico_Changing;
             stone.TextChanging -= Sto_Changing;
             pound.TextChanging -= Pou_Changing;
-            carat.TextChanging -= Car_Changing;
+            carat.TextChanging -= Rand_Changing;
 
             if (ounce.Text == "")
             {
@@ -615,10 +615,10 @@ namespace ConverterApp
             pico.TextChanging += Pico_Changing;
             stone.TextChanging += Sto_Changing;
             pound.TextChanging += Pou_Changing;
-            carat.TextChanging += Car_Changing;
+            carat.TextChanging += Rand_Changing;
         }
 
-        private void Car_Changing(TextBox sender, TextBoxTextChangingEventArgs args)
+        private void Rand_Changing(TextBox sender, TextBoxTextChangingEventArgs args)
         {
             tonne.TextChanging -= Ton_Changing;
             kilo.TextChanging -= Kilo_Changing;
@@ -685,7 +685,7 @@ namespace ConverterApp
             if (double.TryParse(metre.Text, out metreDouble))
             {
                 dec.Text = Convert.ToString(metreDouble * 2e-7);
-                kilo.Text = Convert.ToString(metreDouble * 0.0002);
+                cent.Text = Convert.ToString(metreDouble * 0.0002);
                 mil.Text = Convert.ToString(metreDouble * 0.2);
                 microm.Text = Convert.ToString(metreDouble * 200);
                 nanom.Text = Convert.ToString(metreDouble * 200000000);
@@ -731,7 +731,7 @@ namespace ConverterApp
                 cent.Text = Convert.ToString(inchDouble * 2.54);
                 mil.Text = Convert.ToString(inchDouble * 25.4);
                 microm.Text = Convert.ToString(inchDouble * 25400);
-                nano.Text = Convert.ToString(inchDouble * 25400000);
+                nanom.Text = Convert.ToString(inchDouble * 25400000);
                 ang.Text = Convert.ToString(inchDouble * 254000000);
                 yard.Text = Convert.ToString(inchDouble * 0.0277777777778);
                 foot.Text = Convert.ToString(inchDouble * 0.0833333333333);
@@ -774,7 +774,7 @@ namespace ConverterApp
                 cent.Text = Convert.ToString(footDouble * 30.48);
                 mil.Text = Convert.ToString(footDouble * 304.8);
                 microm.Text = Convert.ToString(footDouble * 304800);
-                nano.Text = Convert.ToString(footDouble * 304800000);
+                nanom.Text = Convert.ToString(footDouble * 304800000);
                 ang.Text = Convert.ToString(footDouble * 3048000000);
                 yard.Text = Convert.ToString(footDouble * 0.333333333333);
                 inch.Text = Convert.ToString(footDouble * 12);
@@ -817,7 +817,7 @@ namespace ConverterApp
                 cent.Text = Convert.ToString(yardDouble * 91.44);
                 mil.Text = Convert.ToString(yardDouble * 914.4);
                 microm.Text = Convert.ToString(yardDouble * 914400);
-                nano.Text = Convert.ToString(yardDouble * 914400000);
+                nanom.Text = Convert.ToString(yardDouble * 914400000);
                 ang.Text = Convert.ToString(yardDouble * 9144000000);
                 foot.Text = Convert.ToString(yardDouble * 3);
                 inch.Text = Convert.ToString(yardDouble * 36);
@@ -860,7 +860,7 @@ namespace ConverterApp
                 cent.Text = Convert.ToString(angDouble * 1e-8);
                 mil.Text = Convert.ToString(angDouble * 1e-7);
                 microm.Text = Convert.ToString(angDouble * 0.0001);
-                nano.Text = Convert.ToString(angDouble * 0.1);
+                nanom.Text = Convert.ToString(angDouble * 0.1);
                 yard.Text = Convert.ToString(angDouble * 1.09361329834e-10);
                 foot.Text = Convert.ToString(angDouble * 3.28083989501e-10);
                 inch.Text = Convert.ToString(angDouble * 3.93700787402e-9);
@@ -1524,6 +1524,530 @@ namespace ConverterApp
             gal.TextChanging += Gal_Changing;
             pint.TextChanging += Ounc_Changing;
             ounc.TextChanging += Cubinch_Changing;
+        }
+
+        private void Mph_Changing(object sender, TextBoxTextChangingEventArgs args)
+        {
+            kph.TextChanging -= Kph_Changing;
+            ms.TextChanging -= Ms_Changing;
+            cms.TextChanging -= Cms_Changing;
+            knot.TextChanging -= Knot_Changing;
+            if (mph.Text == "")
+            {
+                mph.Text = "0";
+            }
+
+            double mphDouble = 0;
+            if (double.TryParse(mph.Text, out mphDouble))
+            {
+                kph.Text = Convert.ToString(mphDouble * 1.609344);
+                ms.Text = Convert.ToString(mphDouble * 0.447040);
+                cms.Text = Convert.ToString(mphDouble * 44.704000);
+                knot.Text = Convert.ToString(mphDouble * 0.868976);
+            }
+
+            kph.TextChanging += Kph_Changing;
+            ms.TextChanging += Ms_Changing;
+            cms.TextChanging += Cms_Changing;
+            knot.TextChanging += Knot_Changing;
+        }
+
+        private void Kph_Changing(TextBox sender, TextBoxTextChangingEventArgs args)
+        {
+            mph.TextChanging -= Mph_Changing;
+            ms.TextChanging -= Ms_Changing;
+            cms.TextChanging -= Cms_Changing;
+            knot.TextChanging -= Knot_Changing;
+            if (kph.Text == "")
+            {
+                kph.Text = "0";
+            }
+
+            double kphDouble = 0;
+            if (double.TryParse(kph.Text, out kphDouble))
+            {
+                mph.Text = Convert.ToString(kphDouble * 0.621371);
+                ms.Text = Convert.ToString(kphDouble * 0.277778);
+                cms.Text = Convert.ToString(kphDouble * 27.777778);
+                knot.Text = Convert.ToString(kphDouble * 0.539957);
+            }
+
+            mph.TextChanging += Mph_Changing;
+            ms.TextChanging += Ms_Changing;
+            cms.TextChanging += Cms_Changing;
+            knot.TextChanging += Knot_Changing;
+        }
+
+        private void Ms_Changing(TextBox sender, TextBoxTextChangingEventArgs args)
+        {
+            mph.TextChanging -= Mph_Changing;
+            kph.TextChanging -= Kph_Changing;
+            cms.TextChanging -= Cms_Changing;
+            knot.TextChanging -= Knot_Changing;
+            if (ms.Text == "")
+            {
+                ms.Text = "0";
+            }
+
+            double msDouble = 0;
+            if (double.TryParse(ms.Text, out msDouble))
+            {
+                mph.Text = Convert.ToString(msDouble * 2.236936);
+                kph.Text = Convert.ToString(msDouble * 3.6);
+                cms.Text = Convert.ToString(msDouble * 100);
+                knot.Text = Convert.ToString(msDouble * 1.943844);
+            }
+
+            mph.TextChanging += Mph_Changing;
+            kph.TextChanging += Kph_Changing;
+            cms.TextChanging += Cms_Changing;
+            knot.TextChanging += Knot_Changing;
+        }
+
+        private void Cms_Changing(TextBox sender, TextBoxTextChangingEventArgs args)
+        {
+            mph.TextChanging -= Mph_Changing;
+            kph.TextChanging -= Kph_Changing;
+            ms.TextChanging -= Ms_Changing;
+            knot.TextChanging -= Knot_Changing;
+            if (cms.Text == "")
+            {
+                cms.Text = "0";
+            }
+
+            double cmsDouble = 0;
+            if (double.TryParse(cms.Text, out cmsDouble))
+            {
+                mph.Text = Convert.ToString(cmsDouble * 0.022369);
+                kph.Text = Convert.ToString(cmsDouble * 0.036);
+                ms.Text = Convert.ToString(cmsDouble * 0.01);
+                knot.Text = Convert.ToString(cmsDouble * 0.019438);
+            }
+
+            mph.TextChanging += Mph_Changing;
+            kph.TextChanging += Kph_Changing;
+            ms.TextChanging += Ms_Changing;
+            knot.TextChanging += Knot_Changing;
+        }
+
+        private void Knot_Changing(TextBox sender, TextBoxTextChangingEventArgs args)
+        {
+            mph.TextChanging -= Mph_Changing;
+            kph.TextChanging -= Kph_Changing;
+            ms.TextChanging -= Ms_Changing;
+            cms.TextChanging -= Cms_Changing;
+            if (knot.Text == "")
+            {
+                knot.Text = "0";
+            }
+
+            double knotDouble = 0;
+            if (double.TryParse(knot.Text, out knotDouble))
+            {
+                mph.Text = Convert.ToString(knotDouble * 1.150779);
+                kph.Text = Convert.ToString(knotDouble * 1.852);
+                ms.Text = Convert.ToString(knotDouble * 0.514444);
+                cms.Text = Convert.ToString(knotDouble * 51.444444);
+            }
+
+            mph.TextChanging += Mph_Changing;
+            kph.TextChanging += Kph_Changing;
+            ms.TextChanging += Ms_Changing;
+            cms.TextChanging += Cms_Changing;
+        }
+
+        private void Acre_Changing(TextBox sender, TextBoxTextChangingEventArgs args)
+        {
+            hect.TextChanging -= Hect_Changing;
+            sqm.TextChanging -= Sqm_Changing;
+            sqf.TextChanging -= Sqf_Changing;
+            sqcm.TextChanging -= Sqcm_Changing;
+            sqi.TextChanging -= Sqi_Changing;
+            if (acre.Text == "")
+            {
+                acre.Text = "0";
+            }
+
+            double acreDouble = 0;
+            if (double.TryParse(acre.Text, out acreDouble))
+            {
+                hect.Text = Convert.ToString(acreDouble * 0.404686);
+                sqm.Text = Convert.ToString(acreDouble * 4046.856422);
+                sqf.Text = Convert.ToString(acreDouble * 43560);
+                sqcm.Text = Convert.ToString(acreDouble * 40468564.224);
+                sqi.Text = Convert.ToString(acreDouble * 6272640);
+            }
+
+            hect.TextChanging += Hect_Changing;
+            sqm.TextChanging += Sqm_Changing;
+            sqf.TextChanging += Sqf_Changing;
+            sqcm.TextChanging += Sqcm_Changing;
+            sqi.TextChanging += Sqi_Changing;
+        }
+
+        private void Hect_Changing(TextBox sender, TextBoxTextChangingEventArgs args)
+        {
+            acre.TextChanging -= Acre_Changing;
+            sqm.TextChanging -= Sqm_Changing;
+            sqf.TextChanging -= Sqf_Changing;
+            sqcm.TextChanging -= Sqcm_Changing;
+            sqi.TextChanging -= Sqi_Changing;
+            if (hect.Text == "")
+            {
+                hect.Text = "0";
+            }
+
+            double hectDouble = 0;
+            if (double.TryParse(hect.Text, out hectDouble))
+            {
+                acre.Text = Convert.ToString(hectDouble * 2.471054);
+                sqm.Text = Convert.ToString(hectDouble * 10000);
+                sqf.Text = Convert.ToString(hectDouble * 107639.104167);
+                sqcm.Text = Convert.ToString(hectDouble * 100000000);
+                sqi.Text = Convert.ToString(hectDouble * 15500031.000062);
+            }
+
+            acre.TextChanging += Acre_Changing;
+            sqm.TextChanging += Sqm_Changing;
+            sqf.TextChanging += Sqf_Changing;
+            sqcm.TextChanging += Sqcm_Changing;
+            sqi.TextChanging += Sqi_Changing;
+        }
+
+        private void Sqm_Changing(TextBox sender, TextBoxTextChangingEventArgs args)
+        {
+            acre.TextChanging -= Acre_Changing;
+            hect.TextChanging -= Hect_Changing;
+            sqf.TextChanging -= Sqf_Changing;
+            sqcm.TextChanging -= Sqcm_Changing;
+            sqi.TextChanging -= Sqi_Changing;
+            if (sqm.Text == "")
+            {
+                sqm.Text = "0";
+            }
+
+            double sqmDouble = 0;
+            if (double.TryParse(sqm.Text, out sqmDouble))
+            {
+                acre.Text = Convert.ToString(sqmDouble * 0.000247);
+                hect.Text = Convert.ToString(sqmDouble * 0.0001);
+                sqf.Text = Convert.ToString(sqmDouble * 10.763910);
+                sqcm.Text = Convert.ToString(sqmDouble * 10000);
+                sqi.Text = Convert.ToString(sqmDouble * 1550.0031);
+            }
+
+            acre.TextChanging += Acre_Changing;
+            hect.TextChanging += Hect_Changing;
+            sqf.TextChanging += Sqf_Changing;
+            sqcm.TextChanging += Sqcm_Changing;
+            sqi.TextChanging += Sqi_Changing;
+        }
+
+        private void Sqf_Changing(TextBox sender, TextBoxTextChangingEventArgs args)
+        {
+            acre.TextChanging -= Acre_Changing;
+            hect.TextChanging -= Hect_Changing;
+            sqm.TextChanging -= Sqm_Changing;
+            sqcm.TextChanging -= Sqcm_Changing;
+            sqi.TextChanging -= Sqi_Changing;
+            if (sqf.Text == "")
+            {
+                sqf.Text = "0";
+            }
+
+            double sqfDouble = 0;
+            if (double.TryParse(sqf.Text, out sqfDouble))
+            {
+                acre.Text = Convert.ToString(sqfDouble * 0.000023);
+                hect.Text = Convert.ToString(sqfDouble * 0.000009);
+                sqm.Text = Convert.ToString(sqfDouble * 0.092903);
+                sqcm.Text = Convert.ToString(sqfDouble * 929.0304);
+                sqi.Text = Convert.ToString(sqfDouble * 144);
+            }
+
+            acre.TextChanging += Acre_Changing;
+            hect.TextChanging += Hect_Changing;
+            sqm.TextChanging += Sqm_Changing;
+            sqcm.TextChanging += Sqcm_Changing;
+            sqi.TextChanging += Sqi_Changing;
+        }
+
+        private void Sqcm_Changing(TextBox sender, TextBoxTextChangingEventArgs args)
+        {
+            acre.TextChanging -= Acre_Changing;
+            hect.TextChanging -= Hect_Changing;
+            sqm.TextChanging -= Sqm_Changing;
+            sqf.TextChanging -= Sqf_Changing;
+            sqi.TextChanging -= Sqi_Changing;
+            if (sqcm.Text == "")
+            {
+                sqcm.Text = "0";
+            }
+
+            double sqcmDouble = 0;
+            if (double.TryParse(sqcm.Text, out sqcmDouble))
+            {
+                acre.Text = Convert.ToString(sqcmDouble * 2.47105e-8);
+                hect.Text = Convert.ToString(sqcmDouble * 1e-8);
+                sqm.Text = Convert.ToString(sqcmDouble * 0.0001);
+                sqf.Text = Convert.ToString(sqcmDouble * 0.001076);
+                sqi.Text = Convert.ToString(sqcmDouble * 0.155);
+            }
+
+            acre.TextChanging += Acre_Changing;
+            hect.TextChanging += Hect_Changing;
+            sqm.TextChanging += Sqm_Changing;
+            sqf.TextChanging += Sqf_Changing;
+            sqi.TextChanging += Sqi_Changing;
+        }
+
+        private void Sqi_Changing(TextBox sender, TextBoxTextChangingEventArgs args)
+        {
+            acre.TextChanging -= Acre_Changing;
+            hect.TextChanging -= Hect_Changing;
+            sqm.TextChanging -= Sqm_Changing;
+            sqf.TextChanging -= Sqf_Changing;
+            sqcm.TextChanging -= Sqcm_Changing;
+            if (sqi.Text == "")
+            {
+                sqi.Text = "0";
+            }
+
+            double sqiDouble = 0;
+            if (double.TryParse(sqi.Text, out sqiDouble))
+            {
+                acre.Text = Convert.ToString(sqiDouble * 1.59423e-7);
+                hect.Text = Convert.ToString(sqiDouble * 6.4516e-8);
+                sqm.Text = Convert.ToString(sqiDouble * 0.000645);
+                sqf.Text = Convert.ToString(sqiDouble * 0.006944);
+                sqcm.Text = Convert.ToString(sqiDouble * 6.4516);
+            }
+
+            acre.TextChanging += Acre_Changing;
+            hect.TextChanging += Hect_Changing;
+            sqm.TextChanging += Sqm_Changing;
+            sqf.TextChanging += Sqf_Changing;
+            sqcm.TextChanging += Sqcm_Changing;
+        }
+
+        private void Byte_Changing(TextBox sender, TextBoxTextChangingEventArgs args)
+        {
+            kb.TextChanging -= Kb_Changing;
+            mb.TextChanging -= Mb_Changing;
+            gb.TextChanging -= Gb_Changing;
+            tb.TextChanging -= Tb_Changing;
+            pb.TextChanging -= Pb_Changing;
+            if (b.Text == "")
+            {
+                b.Text = "0";
+            }
+
+            double bDouble = 0;
+            if (double.TryParse(b.Text, out bDouble))
+            {
+                kb.Text = Convert.ToString(bDouble * 0.001);
+                mb.Text = Convert.ToString(bDouble * 1e-6);
+                gb.Text = Convert.ToString(bDouble * 1.25e-10);
+                tb.Text = Convert.ToString(bDouble * 1.25e-13);
+                pb.Text = Convert.ToString(bDouble * 1e-15);
+            }
+
+            kb.TextChanging += Kb_Changing;
+            mb.TextChanging += Mb_Changing;
+            gb.TextChanging += Gb_Changing;
+            tb.TextChanging += Tb_Changing;
+            pb.TextChanging += Pb_Changing;
+        }
+
+        private void Kb_Changing(TextBox sender, TextBoxTextChangingEventArgs args)
+        {
+            b.TextChanging -= Byte_Changing;
+            mb.TextChanging -= Mb_Changing;
+            gb.TextChanging -= Gb_Changing;
+            tb.TextChanging -= Tb_Changing;
+            pb.TextChanging -= Pb_Changing;
+            if (kb.Text == "")
+            {
+                kb.Text = "0";
+            }
+
+            double kbDouble = 0;
+            if (double.TryParse(kb.Text, out kbDouble))
+            {
+                b.Text = Convert.ToString(kbDouble * 1000);
+                mb.Text = Convert.ToString(kbDouble * 0.001);
+                gb.Text = Convert.ToString(kbDouble * 1e-6);
+                tb.Text = Convert.ToString(kbDouble * 1e-9);
+                pb.Text = Convert.ToString(kbDouble * 1e-12);
+            }
+
+            b.TextChanging += Byte_Changing;
+            mb.TextChanging += Mb_Changing;
+            gb.TextChanging += Gb_Changing;
+            tb.TextChanging += Tb_Changing;
+            pb.TextChanging += Pb_Changing;
+        }
+
+        private void Mb_Changing(TextBox sender, TextBoxTextChangingEventArgs args)
+        {
+            b.TextChanging -= Byte_Changing;
+            kb.TextChanging -= Kb_Changing;
+            gb.TextChanging -= Gb_Changing;
+            tb.TextChanging -= Tb_Changing;
+            pb.TextChanging -= Pb_Changing;
+            if (mb.Text == "")
+            {
+                mb.Text = "0";
+            }
+
+            double mbDouble = 0;
+            if (double.TryParse(mb.Text, out mbDouble))
+            {
+                b.Text = Convert.ToString(mbDouble * 1000000);
+                kb.Text = Convert.ToString(mbDouble * 1000);
+                gb.Text = Convert.ToString(mbDouble * 0.001);
+                tb.Text = Convert.ToString(mbDouble * 1e-6);
+                pb.Text = Convert.ToString(mbDouble * 1e-9);
+            }
+
+            b.TextChanging += Byte_Changing;
+            kb.TextChanging += Kb_Changing;
+            gb.TextChanging += Gb_Changing;
+            tb.TextChanging += Tb_Changing;
+            pb.TextChanging += Pb_Changing;
+        }
+
+        private void Gb_Changing(TextBox sender, TextBoxTextChangingEventArgs args)
+        {
+            b.TextChanging -= Byte_Changing;
+            kb.TextChanging -= Kb_Changing;
+            mb.TextChanging -= Mb_Changing;
+            tb.TextChanging -= Tb_Changing;
+            pb.TextChanging -= Pb_Changing;
+            if (gb.Text == "")
+            {
+                gb.Text = "0";
+            }
+
+            double gbDouble = 0;
+            if (double.TryParse(gb.Text, out gbDouble))
+            {
+                b.Text = Convert.ToString(gbDouble * 8e+9);
+                kb.Text = Convert.ToString(gbDouble * 1000000);
+                mb.Text = Convert.ToString(gbDouble * 1000);
+                tb.Text = Convert.ToString(gbDouble * 0.001);
+                pb.Text = Convert.ToString(gbDouble * 1e-6);
+            }
+
+            b.TextChanging += Byte_Changing;
+            kb.TextChanging += Kb_Changing;
+            mb.TextChanging += Mb_Changing;
+            tb.TextChanging += Tb_Changing;
+            pb.TextChanging += Pb_Changing;
+        }
+
+        private void Tb_Changing(TextBox sender, TextBoxTextChangingEventArgs args)
+        {
+            b.TextChanging -= Byte_Changing;
+            kb.TextChanging -= Kb_Changing;
+            mb.TextChanging -= Mb_Changing;
+            gb.TextChanging -= Gb_Changing;
+            pb.TextChanging -= Pb_Changing;
+            if (tb.Text == "")
+            {
+                tb.Text = "0";
+            }
+
+            double tbDouble = 0;
+            if (double.TryParse(tb.Text, out tbDouble))
+            {
+                b.Text = Convert.ToString(tbDouble * 8e+12);
+                kb.Text = Convert.ToString(tbDouble * 1e+9);
+                mb.Text = Convert.ToString(tbDouble * 1000000);
+                gb.Text = Convert.ToString(tbDouble * 1000);
+                pb.Text = Convert.ToString(tbDouble * 0.001);
+            }
+
+            b.TextChanging += Byte_Changing;
+            kb.TextChanging += Kb_Changing;
+            mb.TextChanging += Mb_Changing;
+            gb.TextChanging += Gb_Changing;
+            pb.TextChanging += Pb_Changing;
+        }
+
+        private void Pb_Changing(TextBox sender, TextBoxTextChangingEventArgs args)
+        {
+            b.TextChanging -= Byte_Changing;
+            kb.TextChanging -= Kb_Changing;
+            mb.TextChanging -= Mb_Changing;
+            gb.TextChanging -= Gb_Changing;
+            tb.TextChanging -= Tb_Changing;
+            if (pb.Text == "")
+            {
+                pb.Text = "0";
+            }
+
+            double pbDouble = 0;
+            if (double.TryParse(pb.Text, out pbDouble))
+            {
+                b.Text = Convert.ToString(pbDouble * 1e+15);
+                kb.Text = Convert.ToString(pbDouble * 1e+12);
+                mb.Text = Convert.ToString(pbDouble * 1e+9);
+                gb.Text = Convert.ToString(pbDouble * 1e+6);
+                tb.Text = Convert.ToString(pbDouble * 1000);
+            }
+
+            b.TextChanging += Byte_Changing;
+            kb.TextChanging += Kb_Changing;
+            mb.TextChanging += Mb_Changing;
+            gb.TextChanging += Gb_Changing;
+            tb.TextChanging += Tb_Changing;
+        }
+
+        private void Eur_Changing(object sender, TextBoxTextChangingEventArgs args)
+        {
+            ste.TextChanging -= Ste_Changing;
+            usd.TextChanging -= Usd_Changing;
+            ad.TextChanging -= Ad_Changing;
+            yen.TextChanging -= Yen_Changing;
+            rub.TextChanging -= Rub_Changing;
+            bah.TextChanging -= Bah_Changing;
+            rup.TextChanging -= Rup_Changing;
+            peso.TextChanging -= Peso_Changing;
+            can.TextChanging -= Can_Changing;
+            rand.TextChanging -= Rand_Changing;
+
+            if (tonne.Text == "")
+            {
+                tonne.Text = "0";
+            }
+            double tonDouble = 0;
+
+            if (double.TryParse(tonne.Text, out tonDouble))
+            {
+                kilo.Text = Convert.ToString(tonDouble * Math.Pow(10, 3));
+                gram.Text = Convert.ToString(tonDouble * Math.Pow(10, 6));
+                mlgram.Text = Convert.ToString(tonDouble * Math.Pow(10, 9));
+                micro.Text = Convert.ToString(tonDouble * Math.Pow(10, 12));
+                nano.Text = Convert.ToString(tonDouble * Math.Pow(10, 15));
+                pico.Text = Convert.ToString(tonDouble * Math.Pow(10, 18));
+                stone.Text = Convert.ToString(tonDouble * 157.473044);
+                pound.Text = Convert.ToString(tonDouble / 0.00045359237);
+                ounce.Text = Convert.ToString(tonDouble / 0.0000283495231);
+                carat.Text = Convert.ToString(tonDouble * 5000000);
+
+            }
+
+            kilo.TextChanging += Kilo_Changing;
+            gram.TextChanging += Gram_Changing;
+            mlgram.TextChanging += Mil_Changing;
+            micro.TextChanging += Mic_Changing;
+            nano.TextChanging += Nano_Changing;
+            pico.TextChanging += Pico_Changing;
+            stone.TextChanging += Sto_Changing;
+            pound.TextChanging += Pou_Changing;
+            ounce.TextChanging += Oun_Changing;
+            carat.TextChanging += Rand_Changing;
         }
     }
 }

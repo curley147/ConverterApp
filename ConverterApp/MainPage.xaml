@@ -11,7 +11,28 @@
         <Pivot x:Name="pvtConv">
             <PivotItem x:Name="curr" Header="Currency" Background="LightGoldenrodYellow">
                 <Grid>
-                    
+                    <TextBox x:Name="eur" TextChanging="Eur_Changing" AcceptsReturn="True" InputScope="Number" MaxLength="20" Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0" TextAlignment="Right" FontSize="20"></TextBox>
+                    <TextBlock Text="€ (euro)" FontSize="20" VerticalAlignment="Top" Margin = "550,10,0,0"></TextBlock>
+                    <TextBox x:Name="ste" TextChanging="Ste_Changing" AcceptsReturn="True" InputScope="Number" MaxLength="20" Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,60,0,0" TextAlignment="Right" FontSize="20"></TextBox>
+                    <TextBlock Text="£ (pound sterling)" FontSize="20" VerticalAlignment="Top" Margin = "550,60,0,0"></TextBlock>
+                    <TextBox x:Name="usd" TextChanging="Usd_Changing" AcceptsReturn="True" InputScope="Number" MaxLength="20" Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,110,0,0" TextAlignment="Right" FontSize="20"></TextBox>
+                    <TextBlock Text="$ (U.S dollar)" FontSize="20" VerticalAlignment="Top" Margin = "550,110,0,0"></TextBlock>
+                    <TextBox x:Name="ad" TextChanging="Ad_Changing" AcceptsReturn="True" InputScope="Number" MaxLength="20" Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,160,0,0" TextAlignment="Right" FontSize="20"></TextBox>
+                    <TextBlock Text="$ (Australian dollar)" FontSize="20" VerticalAlignment="Top" Margin = "550,160,0,0"></TextBlock>
+                    <TextBox x:Name="yen" TextChanging="Yen_Changing" AcceptsReturn="True" InputScope="Number" MaxLength="20" Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,210,0,0" TextAlignment="Right" FontSize="20"></TextBox>
+                    <TextBlock Text="¥ (Japanese yen)" FontSize="20" VerticalAlignment="Top" Margin = "550,210,0,0"></TextBlock>
+                    <TextBox x:Name="rub" TextChanging="Rub_Changing" AcceptsReturn="True" InputScope="Number" MaxLength="20" Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,260,0,0" TextAlignment="Right" FontSize="20"></TextBox>
+                    <TextBlock Text="₽ (Russian Ruble)" FontSize="20" VerticalAlignment="Top" Margin = "550,260,0,0"></TextBlock>
+                    <TextBox x:Name="bah" TextChanging="Bah_Changing" AcceptsReturn="True" InputScope="Number" MaxLength="20" Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,310,0,0" TextAlignment="Right" FontSize="20"></TextBox>
+                    <TextBlock Text=" (Thai baht)" FontSize="20" VerticalAlignment="Top" Margin = "550,310,0,0"></TextBlock>
+                    <TextBox x:Name="rup" TextChanging="Rup_Changing" AcceptsReturn="True" InputScope="Number" MaxLength="20" Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,360,0,0" TextAlignment="Right" FontSize="20"></TextBox>
+                    <TextBlock Text="₮ (Indian rupee)" FontSize="20" VerticalAlignment="Top" Margin = "550,360,0,0"></TextBlock>
+                    <TextBox x:Name="peso" TextChanging="Peso_Changing" AcceptsReturn="True" InputScope="Number" MaxLength="20" Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,410,0,0" TextAlignment="Right" FontSize="20"></TextBox>
+                    <TextBlock Text="₱ (Mexican peso)" FontSize="20" VerticalAlignment="Top" Margin = "550,410,0,0"></TextBlock>
+                    <TextBox x:Name="can" TextChanging="Can_Changing" AcceptsReturn="True" InputScope="Number" MaxLength="20" Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,460,0,0" TextAlignment="Right" FontSize="20"></TextBox>
+                    <TextBlock Text="$ (Canadian dollar)" FontSize="20" VerticalAlignment="Top" Margin = "550,460,0,0"></TextBlock>
+                    <TextBox x:Name="rand" TextChanging="Rand_Changing" AcceptsReturn="True" InputScope="Number" MaxLength="20" Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,510,0,0" TextAlignment="Right" FontSize="20"></TextBox>
+                    <TextBlock Text="R (South African rand)" FontSize="20" VerticalAlignment="Top" Margin = "550,510,0,0"></TextBlock>
                 </Grid>
             </PivotItem>
             <PivotItem x:Name="dist" Header="Distance" Background="LightBlue">
@@ -61,7 +82,7 @@
                     <TextBlock Text="lb (pound)" FontSize="20" VerticalAlignment="Top" Margin = "550,410,0,0"></TextBlock>
                     <TextBox x:Name="ounce" TextChanging="Oun_Changing" AcceptsReturn="True" InputScope="Number" MaxLength="20" Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,460,0,0" TextAlignment="Right" FontSize="20"></TextBox>
                     <TextBlock Text="oz (ounce)" FontSize="20" VerticalAlignment="Top" Margin = "550,460,0,0"></TextBlock>
-                    <TextBox x:Name="carat" TextChanging="Car_Changing" AcceptsReturn="True" InputScope="Number" MaxLength="20" Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,510,0,0" TextAlignment="Right" FontSize="20"></TextBox>
+                    <TextBox x:Name="carat" TextChanging="Rand_Changing" AcceptsReturn="True" InputScope="Number" MaxLength="20" Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,510,0,0" TextAlignment="Right" FontSize="20"></TextBox>
                     <TextBlock Text="ct (carat)" FontSize="20" VerticalAlignment="Top" Margin = "550,510,0,0"></TextBlock>
                 </Grid>
             </PivotItem>
@@ -82,10 +103,32 @@
             </PivotItem>
             <PivotItem x:Name="speed" Header="Speed" Background="LightCoral">
                 <Grid>
+                    <TextBox x:Name="mph" TextChanging="Mph_Changing" AcceptsReturn="True" InputScope="Number" MaxLength="20" Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,90,0,0" TextAlignment="Right" FontSize="20"></TextBox>
+                    <TextBlock Text="mph (miles/hour)" FontSize="20" VerticalAlignment="Top" Margin = "550,95,0,0"></TextBlock>
+                    <TextBox x:Name="kph" TextChanging="Kph_Changing" AcceptsReturn="True" InputScope="Number" MaxLength="20" Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,140,0,0" TextAlignment="Right" FontSize="20"></TextBox>
+                    <TextBlock Text="kph (kilometres/hour)" FontSize="20" VerticalAlignment="Top" Margin = "550,145,0,0"></TextBlock>
+                    <TextBox x:Name="ms" TextChanging="Ms_Changing" AcceptsReturn="True" InputScope="Number" MaxLength="20" Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,190,0,0" TextAlignment="Right" FontSize="20"></TextBox>
+                    <TextBlock Text="m/s (metres/second)" FontSize="20" VerticalAlignment="Top" Margin = "550,195,0,0"></TextBlock>
+                    <TextBox x:Name="cms" TextChanging="Cms_Changing" AcceptsReturn="True" InputScope="Number" MaxLength="20" Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,240,0,0" TextAlignment="Right" FontSize="20"></TextBox>
+                    <TextBlock Text="cm/s (centimetres/second)" FontSize="20" VerticalAlignment="Top" Margin = "550,245,0,0"></TextBlock>
+                    <TextBox x:Name="knot" TextChanging="Knot_Changing" AcceptsReturn="True" InputScope="Number" MaxLength="20" Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,290,0,0" TextAlignment="Right" FontSize="20"></TextBox>
+                    <TextBlock Text="kn (knots)" FontSize="20" VerticalAlignment="Top" Margin = "550,295,0,0"></TextBlock>
                 </Grid>
             </PivotItem>
             <PivotItem x:Name="area" Header="Area" Background="LightSeaGreen">
                 <Grid>
+                    <TextBox x:Name="acre" TextChanging="Acre_Changing" AcceptsReturn="True" InputScope="Number" MaxLength="20" Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,90,0,0" TextAlignment="Right" FontSize="20"></TextBox>
+                    <TextBlock Text="acres" FontSize="20" VerticalAlignment="Top" Margin = "550,95,0,0"></TextBlock>
+                    <TextBox x:Name="hect" TextChanging="Hect_Changing" AcceptsReturn="True" InputScope="Number" MaxLength="20" Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,140,0,0" TextAlignment="Right" FontSize="20"></TextBox>
+                    <TextBlock Text="hectares" FontSize="20" VerticalAlignment="Top" Margin = "550,145,0,0"></TextBlock>
+                    <TextBox x:Name="sqm" TextChanging="Sqm_Changing" AcceptsReturn="True" InputScope="Number" MaxLength="20" Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,190,0,0" TextAlignment="Right" FontSize="20"></TextBox>
+                    <TextBlock Text="m² (square metres)" FontSize="20" VerticalAlignment="Top" Margin = "550,195,0,0"></TextBlock>
+                    <TextBox x:Name="sqf" TextChanging="Sqf_Changing" AcceptsReturn="True" InputScope="Number" MaxLength="20" Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,240,0,0" TextAlignment="Right" FontSize="20"></TextBox>
+                    <TextBlock Text="square feet" FontSize="20" VerticalAlignment="Top" Margin = "550,245,0,0"></TextBlock>
+                    <TextBox x:Name="sqcm" TextChanging="Sqcm_Changing" AcceptsReturn="True" InputScope="Number" MaxLength="20" Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,290,0,0" TextAlignment="Right" FontSize="20"></TextBox>
+                    <TextBlock Text="cm² (square centimetres)" FontSize="20" VerticalAlignment="Top" Margin = "550,295,0,0"></TextBlock>
+                    <TextBox x:Name="sqi" TextChanging="Sqi_Changing" AcceptsReturn="True" InputScope="Number" MaxLength="20" Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,340,0,0" TextAlignment="Right" FontSize="20"></TextBox>
+                    <TextBlock Text="square inches" FontSize="20" VerticalAlignment="Top" Margin = "550,345,0,0"></TextBlock>
                 </Grid>
             </PivotItem>
             <PivotItem x:Name="vol" Header="Volume" Background="LightCyan">
@@ -108,12 +151,24 @@
                     <TextBlock Text="pt (pint)" FontSize="20" VerticalAlignment="Top" Margin = "550,365,0,0"></TextBlock>
                     <TextBox x:Name="ounc" TextChanging="Ounc_Changing" AcceptsReturn="True" InputScope="Number" MaxLength="20" Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,415,0,0" TextAlignment="Right" FontSize="20"></TextBox>
                     <TextBlock Text="oz (fluid)" FontSize="20" VerticalAlignment="Top" Margin = "550,415,0,0"></TextBlock>
-                    <TextBox x:Name="cubinch" TextChanging="CubInch_Changing" AcceptsReturn="True" InputScope="Number" MaxLength="20" Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,465,0,0" TextAlignment="Right" FontSize="20"></TextBox>
+                    <TextBox x:Name="cubinch" TextChanging="Cubinch_Changing" AcceptsReturn="True" InputScope="Number" MaxLength="20" Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,465,0,0" TextAlignment="Right" FontSize="20"></TextBox>
                     <TextBlock Text="in³ (cubic inch)" FontSize="20" VerticalAlignment="Top" Margin = "550,465,0,0"></TextBlock>
                 </Grid>
             </PivotItem>
             <PivotItem x:Name="bytes"  Header="Bytes" Background="Lavender">
                 <Grid>
+                    <TextBox x:Name="b" TextChanging="Byte_Changing" AcceptsReturn="True" InputScope="Number" MaxLength="20" Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,90,0,0" TextAlignment="Right" FontSize="20"></TextBox>
+                    <TextBlock Text="bytes" FontSize="20" VerticalAlignment="Top" Margin = "550,95,0,0"></TextBlock>
+                    <TextBox x:Name="kb" TextChanging="Kb_Changing" AcceptsReturn="True" InputScope="Number" MaxLength="20" Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,140,0,0" TextAlignment="Right" FontSize="20"></TextBox>
+                    <TextBlock Text="kilobytes" FontSize="20" VerticalAlignment="Top" Margin = "550,145,0,0"></TextBlock>
+                    <TextBox x:Name="mb" TextChanging="Mb_Changing" AcceptsReturn="True" InputScope="Number" MaxLength="20" Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,190,0,0" TextAlignment="Right" FontSize="20"></TextBox>
+                    <TextBlock Text="megabytes" FontSize="20" VerticalAlignment="Top" Margin = "550,195,0,0"></TextBlock>
+                    <TextBox x:Name="gb" TextChanging="Gb_Changing" AcceptsReturn="True" InputScope="Number" MaxLength="20" Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,240,0,0" TextAlignment="Right" FontSize="20"></TextBox>
+                    <TextBlock Text="gigabytes" FontSize="20" VerticalAlignment="Top" Margin = "550,245,0,0"></TextBlock>
+                    <TextBox x:Name="tb" TextChanging="Tb_Changing" AcceptsReturn="True" InputScope="Number" MaxLength="20" Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,290,0,0" TextAlignment="Right" FontSize="20"></TextBox>
+                    <TextBlock Text="terabytes" FontSize="20" VerticalAlignment="Top" Margin = "550,295,0,0"></TextBlock>
+                    <TextBox x:Name="pb" TextChanging="Pb_Changing" AcceptsReturn="True" InputScope="Number" MaxLength="20" Height = "40" Width = "300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,340,0,0" TextAlignment="Right" FontSize="20"></TextBox>
+                    <TextBlock Text="petabytes" FontSize="20" VerticalAlignment="Top" Margin = "550,345,0,0"></TextBlock>
                 </Grid>
             </PivotItem>
         </Pivot>
